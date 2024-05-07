@@ -11,6 +11,9 @@ const Home = () => {
 
   return (
     <div className="home h-screen flex flex-col items-center justify-center">
+      <button className="absolute top-2  right-2 text-2xl text-white">
+        <a href="https://github.com/sameerkali/React_coding_round_practice" target="_blank">GitHub</a>
+      </button>
       <h1 className="text-[5rem] text-center sm:text-[6rem] font-bold mb-8 text-[#a29bfe]">
         Practice Interview Problems
       </h1>
@@ -21,20 +24,20 @@ const Home = () => {
           "three",
           "four",
           "five",
-          "one",
-          "two",
-          "three",
-          "one",
-          "two",
-          "three",
-          "one",
-          "two",
-          "three"
-        ].map(number =>
+          "onee",
+          "twoe",
+          "thr",
+          "oneww",
+          "twow",
+          "threew",
+          "ones",
+          "twoa",
+          "thw"
+        ].map((number, index) =>
           <Link to={`/one`}>
             <button
               title={number}
-              key={number}
+              key={index}
               className="custom-button"
               onClick={() => handleButtonPress(number)}
             >

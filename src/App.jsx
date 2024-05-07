@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import One from "./assessment01/One";
+import One from "./All Assessment/assessment01/One";
 import Home from "./Home";
 
 const App = () => {

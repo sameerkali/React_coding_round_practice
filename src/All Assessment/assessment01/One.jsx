@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import '../index.css'
+import '../../index.css'
+import GoToHome from "../../Components/GoToHome";
 
 const One = () => {
   const [clicked, setClicked] = useState(false);
@@ -31,6 +32,7 @@ const One = () => {
       >
         {clicked ? 'Stop' : 'Start'}
       </button>
+      <GoToHome/>
     </div>
   );
 };
