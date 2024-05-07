@@ -1,0 +1,38 @@
+import React, { useEffect, useState } from "react";
+import '../index.css'
+
+const One = () => {
+  const [clicked, setClicked] = useState(false);
+  const [time, setTime] = useState(0);
+
+  const handleclick = () => {
+    setClicked(!clicked);
+  };
+
+  useEffect(() => {
+    let interval;
+    if (clicked) {
+      interval = setInterval(() => {
+        setTime(prevTime => prevTime + 1);
+      }, 500);
+    } else {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [clicked]);
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen gap-10">
+      <div className="text-6xl">{time}</div>
+      <button
+        className="custom-button"
+        onClick={handleclick}
+      >
+        {clicked ? 'Stop' : 'Start'}
+      </button>
+    </div>
+  );
+};
+
+export default One;
