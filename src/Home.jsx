@@ -2,6 +2,7 @@
 
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const handleButtonPress = number => {
@@ -30,14 +31,16 @@ const Home = () => {
           "two",
           "three"
         ].map(number =>
-          <button
-            title={number}
-            key={number}
-            className="custom-button"
-            onClick={() => handleButtonPress(number)}
-          >
-            {number}
-          </button>
+          <Link to={`/one`}>
+            <button
+              title={number}
+              key={number}
+              className="custom-button"
+              onClick={() => handleButtonPress(number)}
+            >
+              {number}
+            </button>
+          </Link>
         )}
       </div>
     </div>
