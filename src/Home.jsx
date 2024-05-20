@@ -34,7 +34,7 @@ const Home = () => {
           "twoa",
           "thw"
         ].map((number, index) =>
-          <Link to={`/one`}>
+          <Link to={`/${number}`}>
             <button
               title={number}
               key={index}

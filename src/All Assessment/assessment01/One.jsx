@@ -33,8 +33,6 @@ const One = () => {
         {clicked ? 'Stop' : 'Start'}
       </button>
       <GoToHome/>
-      <GoToHome/>
-      <GoToHome/>
     </div>
   );
 };
