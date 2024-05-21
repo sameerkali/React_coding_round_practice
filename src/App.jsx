@@ -4,6 +4,7 @@ import One from "./All Assessment/assessment01/One";
 import Home from "./Home";
 import Two from "./All Assessment/assessment02/Two";
 import Page404 from "./Page404";
+import Three from "./All Assessment/assessment03/Three";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/one" element={<One />} />
         <Route path="/two" element={<Two />} />
+        <Route path="/three" element={<Three />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
