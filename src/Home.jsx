@@ -10,7 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home h-screen flex flex-col items-center justify-center">
+    <div className="home h-screen flex flex-col items-center justify-center ">
       <button className="absolute top-2  right-2 text-2xl text-white">
         <a href="https://github.com/sameerkali/React_coding_round_practice" target="_blank">GitHub</a>
       </button>
