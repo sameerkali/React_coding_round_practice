@@ -5,12 +5,7 @@ const Six = () => {
 
   const [searchKeys, setSearchKeys] = useState("");
   const [apiData, setApiData] = useState([]);
-  console.log(apiData)
-
-
-  const handleChangeSearch = e => {
-    setSearchKeys(e.target.value);
-  };
+  console.log(apiData);
 
   const apiCall = async () => {
     const data = await fetch(`http://api.tvmaze.com/search/shows?q=${searchKeys}`)
@@ -39,7 +34,7 @@ const Six = () => {
           className="border-solid border-2 border-gray-500 rounded-md px-6 py-3  mt-5 w-full"
           placeholder="search..."
           type="search"
-          onChange={handleChangeSearch}
+          onChange={(e)=>setSearchKeys(e.target.value)}
         />
         <div
           className={`border-solid border-2 border-gray-500 rounded-md h-[30rem] flex  flex-col ${!searchKeys ? 'hidden' : 'flex'}`}
