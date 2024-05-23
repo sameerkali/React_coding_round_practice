@@ -24,15 +24,15 @@ const Home = () => {
           "three",
           "four",
           "five",
-          "onee",
-          "twoe",
-          "thr",
-          "oneww",
-          "twow",
-          "threew",
-          "ones",
-          "twoa",
-          "thw"
+          "six",
+          "seven",
+          "eight",
+          "nine",
+          "ten",
+          "eleven",
+          "twelve",
+          "thirteen",
+          "fourteen",
         ].map((number, index) =>
           <Link to={`/${number}`}>
             <button

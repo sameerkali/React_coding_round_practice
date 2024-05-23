@@ -7,6 +7,7 @@ import Page404 from "./Page404";
 import Three from "./All Assessment/assessment03/Three";
 import Four from "./All Assessment/assessment04/Four";
 import Five from "./All Assessment/assessment05/Five";
+import Six from "./All Assessment/assessment06/Six";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/three" element={<Three />} />
         <Route path="/four" element={<Four />} />
         <Route path="/five" element={<Five />} />
+        <Route path="/six" element={<Six />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
