@@ -8,7 +8,7 @@ const Six = () => {
   console.log(apiData);
 
   const apiCall = async () => {
-    const data = await fetch(`http://api.tvmaze.com/search/shows?q=${searchKeys}`)
+    const data = await fetch(`https://api.tvmaze.com/search/shows?q=${searchKeys}`)
     const readableData = await data.json();
     setApiData(readableData)
   };
