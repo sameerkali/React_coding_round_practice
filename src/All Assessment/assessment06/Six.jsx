@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GoToHome from "../../Components/GoToHome";
 
 const Six = () => {
-  const api = 'http://api.tvmaze.com/search/shows?q=ass'
 
-const [searchKeys, setSearchKeys] = useState('');
-console.log(searchKeys)
-  const handleChangeSearch = (e) => {
+  const [searchKeys, setSearchKeys] = useState("");
+  const [apiData, setApiData] = useState([]);
+  console.log(apiData)
+
+
+  const handleChangeSearch = e => {
     setSearchKeys(e.target.value);
-  }
+  };
 
+  const apiCall = async () => {
+    const data = await fetch(`http://api.tvmaze.com/search/shows?q=${searchKeys}`)
+    const readableData = await data.json();
+    setApiData(readableData)
+  };
+
+  useEffect(
+    () => {
+      try {
+        apiCall();
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [searchKeys]
+  );
 
   return (
     <div className="flex flex-col   h-screen items-center mt-20">
@@ -23,8 +41,14 @@ console.log(searchKeys)
           type="search"
           onChange={handleChangeSearch}
         />
-        <div className={`border-solid border-2 border-gray-500 rounded-md h-40 hidden`} >
-          {`search data`}
+        <div
+          className={`border-solid border-2 border-gray-500 rounded-md h-[30rem] flex  flex-col ${!searchKeys ? 'hidden' : 'flex'}`}
+        >
+          {apiData.map(data => (
+           <a className="text-black mr-10 border-b-2 mb-1 p-2" target="_blank" key={data?.show?.id} href={data?.show?.url}>
+              {data?.show?.name}
+            </a>
+          ))}
         </div>
       </div>
     </div>
