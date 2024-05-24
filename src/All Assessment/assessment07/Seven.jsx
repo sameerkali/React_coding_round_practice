@@ -4,9 +4,12 @@ import GoToHome from '../../Components/GoToHome'
 const Seven = () => {
   return (
     <div>
-    <GoToHome/>
-    <div className=''>
-      {/* main contant */}
+    <div className='flex flex-col justify-center items-center h-screen'>
+      <GoToHome/>
+      <h1>Feature Flage</h1>
+      <div className=''>
+
+      </div>
     </div>
     </div>
   )
