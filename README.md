@@ -1,8 +1,23 @@
-# React + Vite
+# Technical Round Prepraction
+### table of content
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Holy Grail Layout
+* Tabs Composition
+* Comment section using React | Recursion and DFS in React
+* useMemo Hook Polyfill
+* Like Button - GreatFrontEnd
+* Job Board - GreatFrontEnd (hacker news api)
+* useEffect Hook Polyfill
+* Dark mode Light mode 
+* Breadcrumbs
+* OTP Login 
+* Multi Select Search
+* Stepper component (roadside coder && learners bucket) 
+* useThrottle Hook
+* Quiz App
+* Drag and Drop Notes
+* Tic Tac Toe
+* Modal as functional component
+* Step-by-step website walk-through helper in JavaScript
+* Detect overlapping circle (learners bucket)
