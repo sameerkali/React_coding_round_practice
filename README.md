@@ -6,9 +6,9 @@
 
 
 ## Easy:
-* Stop Watch
-* Password Generator
-* Color Changing Button
+* Stop Watch ✅
+* Password Generator ✅
+* Color Changing Button ✅
 * Tabs Composition
 * Dark mode Light mode
 * Breadcrumbs
@@ -16,11 +16,11 @@
 
 ## Medium:
  
-* Selectable Grid
-* Progress Bar
-* Infinite Scroll
-* Search Suggestions
-* Holy Grail Layout
+* Selectable Grid ✅
+* Progress Bar ✅
+* Infinite Scroll ✅
+* Search Suggestions ✅
+* Holy Grail Layout ✅
 * Comment Section using React (Recursion and DFS in React)
 * useMemo Hook Polyfill
 * Like Button - GreatFrontEnd
