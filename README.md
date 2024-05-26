@@ -21,7 +21,7 @@
 * Infinite Scroll ✅
 * Search Suggestions ✅
 * Holy Grail Layout ✅
-* useEffect Hook Polyfill
+* useEffect Hook Polyfill✅
 * useMemo Hook Polyfill
 * useThrottle Hook
 * Like Button - GreatFrontEnd
@@ -49,3 +49,4 @@ Modal as a functional component
 * Color Changing Button : ✅
 * Holy Grail Layout : ✅
 * Tabs Composition : ✅
+* useEffect Hook Polyfill✅

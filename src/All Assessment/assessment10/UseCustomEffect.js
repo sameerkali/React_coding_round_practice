@@ -1,4 +1,6 @@
-const useECustomffect = (effect, deps) => {
+import { useRef } from "react";
+
+const useCustomffect = (effect, deps) => {
     const isFirstRender = useRef(true);
     const prevDeps = useRef([]);
   
@@ -28,3 +30,4 @@ const useECustomffect = (effect, deps) => {
   
     prevDeps.current = deps || [];
 };
+export default useCustomffect
