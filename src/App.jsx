@@ -10,6 +10,7 @@ import Five from "./All Assessment/assessment05/Five";
 import Six from "./All Assessment/assessment06/Six";
 import Seven from "./All Assessment/assessment07/Seven";
 import Eight from "./All Assessment/assessment08/Eight";
+import Nine from "./All Assessment/assessment09/Nine";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
         <Route path="/six" element={<Six />} />
         <Route path="/seven" element={<Seven />} />
         <Route path="/eight" element={<Eight />} />
-        {/* <Route path="/nine" element={<Six />} /> */}
+        <Route path="/nine" element={<Nine />} />
         {/* <Route path="/ten" element={<Six />} /> */}
         {/* <Route path="/eleven" element={<Six />} /> */}
         {/* <Route path="/twelve" element={<Six />} /> */}
