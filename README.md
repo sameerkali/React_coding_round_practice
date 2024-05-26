@@ -29,7 +29,7 @@
 * useThrottle Hook
 Modal as a functional component
 
-* Hard:
+ ## Hard:
 
 * Job Board - GreatFrontEnd (Hacker News API)
 * Stepper Component (RoadSide Coder && Learners Bucket)
