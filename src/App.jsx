@@ -9,6 +9,7 @@ import Four from "./All Assessment/assessment04/Four";
 import Five from "./All Assessment/assessment05/Five";
 import Six from "./All Assessment/assessment06/Six";
 import Seven from "./All Assessment/assessment07/Seven";
+import Eight from "./All Assessment/assessment08/Eight";
 
 const App = () => {
   return (
@@ -22,13 +23,13 @@ const App = () => {
         <Route path="/five" element={<Five />} />
         <Route path="/six" element={<Six />} />
         <Route path="/seven" element={<Seven />} />
-        {/* <Route path="/eight" element={<Six />} />
-        <Route path="/nine" element={<Six />} />
-        <Route path="/ten" element={<Six />} />
-        <Route path="/eleven" element={<Six />} />
-        <Route path="/twelve" element={<Six />} />
-        <Route path="/thirteen" element={<Six />} />
-        <Route path="/fourteen" element={<Six />} /> */}
+        <Route path="/eight" element={<Eight />} />
+        {/* <Route path="/nine" element={<Six />} /> */}
+        {/* <Route path="/ten" element={<Six />} /> */}
+        {/* <Route path="/eleven" element={<Six />} /> */}
+        {/* <Route path="/twelve" element={<Six />} /> */}
+        {/* <Route path="/thirteen" element={<Six />} /> */}
+        {/* <Route path="/fourteen" element={<Six />} /> */}
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
