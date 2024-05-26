@@ -9,7 +9,7 @@
 * Stop Watch ✅
 * Password Generator ✅
 * Color Changing Button ✅
-* Tabs Composition
+* Tabs Composition ✅
 * Dark mode Light mode
 * Breadcrumbs
 * OTP Login
@@ -21,12 +21,12 @@
 * Infinite Scroll ✅
 * Search Suggestions ✅
 * Holy Grail Layout ✅
-* Comment Section using React (Recursion and DFS in React)
-* useMemo Hook Polyfill
-* Like Button - GreatFrontEnd
 * useEffect Hook Polyfill
-* Multi-Select Search
+* useMemo Hook Polyfill
 * useThrottle Hook
+* Like Button - GreatFrontEnd
+* Multi-Select Search
+* Comment Section using React (Recursion and DFS in React)
 Modal as a functional component
 
  ## Hard:
@@ -48,3 +48,4 @@ Modal as a functional component
 * Search Suggestions : ✅
 * Color Changing Button : ✅
 * Holy Grail Layout : ✅
+* Tabs Composition : ✅
