@@ -26,7 +26,7 @@
 - Multi-Select Search
 - Comment Section using React (Recursion and DFS in React)
 - Modal as a functional component
-- Blink game (Rowdi Coder)
+- Blink game (Rowdi Coder) ✅
 
 ## Hard:
 
@@ -51,3 +51,4 @@
 - Tabs Composition : ✅
 - useEffect Hook Polyfill✅ 😢
 - Job Board - GreatFrontEnd (Hacker News API) ✅ 😢
+- Blink game (Rowdi Coder) ✅
