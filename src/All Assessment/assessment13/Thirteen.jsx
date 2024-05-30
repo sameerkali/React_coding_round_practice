@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom'
 
 const Thirteen = () => {
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center h-screen'>
+    <Link to={`/`} className='text-3xl font-bold underline'>Home</Link>
       {/* main content || Breadcrumbs */}
-      <p>Breadcrumbs</p>
-      <Link to='/page01'>page01</Link>
-      <Link to='/page02'>page02</Link>
-      <Link to='/page03'>page03</Link>
+      <p className='text-5xl font-bold font-serif text-purple-800'> this is my ecomamrce page (13)</p>
+      <p className='text-purple-900'>Breadcrumbs</p>
+      <div className='flex gap-5 mt-10'>
+        <Link className='underline' to='/page01'>All Product</Link>
+        <div> / </div>
+        <Link className='underline' to='/page02'>Breadcrumbs (not implimented yet)</Link>
+        <div> / </div>
+        <Link className='underline' to='/page03'> Details page ( Do not go there )</Link>
+      </div>
     </div>
   )
 }
