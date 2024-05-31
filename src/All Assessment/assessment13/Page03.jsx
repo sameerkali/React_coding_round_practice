@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Page02 from './Page02';
 
 const Page03 = () => {
   const { id } = useParams();
@@ -18,6 +19,7 @@ const Page03 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
+     <Page02/>
       <h1 className="text-2xl font-bold">{product.title}</h1>
       <img src={product.image} alt={product.title} className="h-44 w-auto mx-auto object-cover" />
       <p className="mt-4">{product.description}</p>

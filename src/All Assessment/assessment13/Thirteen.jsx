@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Page02 from './Page02'
 
 const Thirteen = () => {
   return (
@@ -8,6 +9,7 @@ const Thirteen = () => {
       {/* main content || Breadcrumbs */}
       <p className='text-5xl font-bold font-serif text-purple-800'> this is my ecomamrce page (13)</p>
       <p className='text-purple-900'>Breadcrumbs</p>
+      <Page02/>
       <div className='flex gap-5 mt-10'>
         <Link className='underline' to='/page01'>All Product</Link>
         <div> / </div>

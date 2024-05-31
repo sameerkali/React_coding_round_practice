@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Page02 from "./Page02";
 
 const Page01 = () => {
   const [data, setData] = useState([]);
@@ -19,11 +20,12 @@ const Page01 = () => {
     fetchData();
   }, []);
 
-  if (data == 0) return <div>loading.....</div>;
+  if (data == 0) return <div>loading...</div>;
 
   return (
     <div>
       <Link className='text-red-500 text-4xl' to={`/thirteen`}>back to home </Link>
+      <Page02/>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {/* main data */}
