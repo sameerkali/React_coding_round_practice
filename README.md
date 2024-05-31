@@ -8,9 +8,9 @@
 - Password Generator ✅
 - Color Changing Button ✅
 - Tabs Composition ✅
-- Dark mode Light mode
-- Breadcrumbs
+- Breadcrumbs ✅
 - OTP Login
+- Dark mode Light mode
 
 ## Medium:
 
