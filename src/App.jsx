@@ -18,6 +18,7 @@ import Thirteen from "./All Assessment/assessment13/Thirteen";
 import Page01 from "./All Assessment/assessment13/Page01";
 import Page02 from "./All Assessment/assessment13/Page02";
 import Page03 from "./All Assessment/assessment13/Page03";
+import Fourteen from "./All Assessment/assessment14/Fourteen";
 
 const App = () => {
   return (
@@ -42,7 +43,7 @@ const App = () => {
         <Route path="/page02" element={<Page02 />} />
         <Route path="/page03/:id" element={<Page03 />} />
         {/* this is including in thirteen */}
-        {/* <Route path="/fourteen" element={<Six />} /> */}
+        <Route path="/fourteen" element={<Fourteen />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
@@ -50,8 +51,6 @@ const App = () => {
 };
 
 export default App;
-
-
 
 // the object way to make the router
 
