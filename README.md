@@ -3,6 +3,7 @@
 ### table of content
 
 ## Easy:
+// useMemo 
 
 - Stop Watch ✅
 - Password Generator ✅
