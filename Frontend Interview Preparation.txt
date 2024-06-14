@@ -1,0 +1,107 @@
+﻿Frontend Interview Preparation
+1. Basic Web Concepts
+   1. Page rendering cycle
+   2. http/https/https2
+   3. CORS
+   4. Local storage/Session storage
+   5. Web Vitals
+   6. Cookie
+   7. JWT
+   8. XHR
+   9. Micro Frontend
+   10. REST/GraphQL/Socket connection
+   11. Browser Concepts
+   12. Debugging Application
+   13. Chrome Dev Tool Features
+2. HTML
+   1. Semantic HTML5 Elements
+   2. HTML Forms and Validation
+   3. Accessibility (A11y)
+   4. Responsive Design with HTML and CSS
+   5. HTML APIs and Integrations
+   6. HTML Templates and Shadow DOM
+   7. Microdata and Schema.org
+   8. Performance Optimization
+   9. Forms and Accessibility
+   10. Web Security Fundamentals
+3. CSS
+   1. Class and other selectors
+   2. Pseudo Classes
+   3. Box Model
+   4. Pseudo Elements
+   5. CSS type - flex, grid, normal
+   6. How to centre
+   7. pseudo classes and elements
+   8. All element states - active, hover
+   9. Media queries
+   10. Pre-processors - SCSS or LESS
+   11. mixins
+   12. CSS constants
+   13. BEM
+   14. Import
+4. Javascript
+   1. Basic
+      1. Data types
+      2. Functions
+      3. Scope in JavaScript
+      4. Closure
+      5. Event loop
+      6. Prototype and prototype chain
+      7. Class and inheritance
+      8. DOM
+      9. bind/call/apply
+      10. Promise
+      11. WebAPI
+      12. Task queue
+      13. Call stack
+      14. Async/await
+      15. Generators
+      16. Typescript
+   2. Advance
+      1. OOPs concept
+      2. Design Patterns
+         1. Singleton
+         2. Provider
+         3. Prototype
+         4. Observer
+         5. Module
+         6. HOC
+      3. Understanding V8 in depth
+         1. JIT
+         2. Interpreter
+         3. Execution
+         4. Compiler
+      4. Currying
+5. React
+   1. eBook (100 interview ques) - https://drive.google.com/file/d/1QDqDFytObucUS5z7mAv20qMSSjByUuzw/view?usp=sharing
+   2. Basic
+      1. Introduction JSX
+      2. React Component
+      3. Component State and Props
+      4. Adding Style (CSS)
+      5. Functional and Class components
+      6. React Lifecycle Methods
+      7. Virtual DOM
+      8. React Hooks
+      9. Custom Hooks
+      10. Context API
+      11. Synthetic Events
+      12. Routing
+      13. Data Flow (Redux/Flux)
+      14. Server-Side Rendering
+      15. Unit Testing
+      16. Jest & React Testing library
+      17. Mocking Data
+      18. Understanding Webpack (Bundler)
+      19. Babel, env, prettier, linter
+6. Redux
+   1. What are the core principles of Redux?
+   2. How does Redux differ from the Context API in React?
+   3. Can you explain the role of middleware in Redux and name some commonly used middleware?
+   4. What is the purpose of combineReducers in Redux?
+   5. Describe the steps of a typical Redux data flow.
+   6. How do you handle asynchronous actions in Redux?
+   7. What is the significance of immutability in Redux, and how do you ensure state immutability?
+   8. What are selectors in Redux, and why are they useful?
+   9. Can you provide an example of how to structure a large-scale Redux application?
+   10. How do you debug a Redux application?
