@@ -19,6 +19,7 @@ import Page01 from "./All Assessment/assessment13/Page01";
 import Page02 from "./All Assessment/assessment13/Page02";
 import Page03 from "./All Assessment/assessment13/Page03";
 import Fourteen from "./All Assessment/assessment14/Fourteen";
+import Fifteen from "./All Assessment/assessment15/Fifteen";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/page03/:id" element={<Page03 />} />
         {/* this is including in thirteen */}
         <Route path="/fourteen" element={<Fourteen />} />
+        <Route path="/fifteen" element={<Fifteen />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
@@ -51,111 +53,3 @@ const App = () => {
 };
 
 export default App;
-
-// the object way to make the router
-
-/*
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import One from "./All Assessment/assessment01/One";
-import Home from "./Home";
-import Two from "./All Assessment/assessment02/Two";
-import Page404 from "./Page404";
-import Three from "./All Assessment/assessment03/Three";
-import Four from "./All Assessment/assessment04/Four";
-import Five from "./All Assessment/assessment05/Five";
-import Six from "./All Assessment/assessment06/Six";
-import Seven from "./All Assessment/assessment07/Seven";
-import Eight from "./All Assessment/assessment08/Eight";
-import Nine from "./All Assessment/assessment09/Nine";
-import Ten from "./All Assessment/assessment10/Ten";
-import Eleven from "./All Assessment/assessment11/Eleven";
-import Twelve from "./All Assessment/assessment12/Twelve";
-import Thirteen from "./All Assessment/assessment13/Thirteen";
-import Page01 from "./All Assessment/assessment13/Page01";
-import Page02 from "./All Assessment/assessment13/Page02";
-import Page03 from "./All Assessment/assessment13/Page03";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/one",
-    element: <One />,
-  },
-  {
-    path: "/two",
-    element: <Two />,
-  },
-  {
-    path: "/three",
-    element: <Three />,
-  },
-  {
-    path: "/four",
-    element: <Four />,
-  },
-  {
-    path: "/five",
-    element: <Five />,
-  },
-  {
-    path: "/six",
-    element: <Six />,
-  },
-  {
-    path: "/seven",
-    element: <Seven />,
-  },
-  {
-    path: "/eight",
-    element: <Eight />,
-  },
-  {
-    path: "/nine",
-    element: <Nine />,
-  },
-  {
-    path: "/ten",
-    element: <Ten />,
-  },
-  {
-    path: "/eleven",
-    element: <Eleven />,
-  },
-  {
-    path: "/twelve",
-    element: <Twelve />,
-  },
-  {
-    path: "/thirteen",
-    element: <Thirteen />,
-    children: [
-      {
-        path: "page01",
-        element: <Page01 />,
-      },
-      {
-        path: "page02",
-        element: <Page02 />,
-      },
-      {
-        path: "page03/:id",
-        element: <Page03 />,
-      },
-    ],
-  },
-  {
-    path: "*",
-    element: <Page404 />,
-  },
-]);
-
-const App = () => {
-  return <RouterProvider router={router} />;
-};
-
-export default App;
-*/

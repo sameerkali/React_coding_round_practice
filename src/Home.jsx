@@ -38,6 +38,13 @@ const Home = () => {
           "twelve",
           "thirteen",
           "fourteen",
+          "fifteen",
+          "sixteen",
+          "seventeen",
+          "eighteen",
+          "nineteen",
+          "ninneteen",
+          "twenty"
         ].map((number, index) =>
           <Link to={`/${number}`}>
             <button

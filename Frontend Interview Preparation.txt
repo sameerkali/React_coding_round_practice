@@ -1,4 +1,4 @@
-﻿Frontend Interview Preparation
+Frontend Interview Preparation
 1. Basic Web Concepts
    1. Page rendering cycle
    2. http/https/https2
@@ -105,3 +105,4 @@
    8. What are selectors in Redux, and why are they useful?
    9. Can you provide an example of how to structure a large-scale Redux application?
    10. How do you debug a Redux application?
+
