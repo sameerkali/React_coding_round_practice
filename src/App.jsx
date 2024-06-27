@@ -20,6 +20,7 @@ import Page02 from "./All Assessment/assessment13/Page02";
 import Page03 from "./All Assessment/assessment13/Page03";
 import Fourteen from "./All Assessment/assessment14/Fourteen";
 import Fifteen from "./All Assessment/assessment15/Fifteen";
+import Sixteen from "./All Assessment/assessment16/Sixteen";
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
         {/* this is including in thirteen */}
         <Route path="/fourteen" element={<Fourteen />} />
         <Route path="/fifteen" element={<Fifteen />} />
+        <Route path="/sixteen" element={<Sixteen />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
