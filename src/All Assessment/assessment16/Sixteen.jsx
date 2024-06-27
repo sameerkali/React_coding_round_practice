@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Tesseract from "tesseract.js";
 
 const Sixteen = () => {
@@ -30,24 +31,33 @@ const Sixteen = () => {
   };
 
   return (
-    <div>
-      <h1>Image to Text Converter</h1>
-      <input type="file" onChange={handleImageChange} />
-      <button onClick={convertImageToText} disabled={loading}>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Image to Text Converter</h1>
+      <input
+        type="file"
+        onChange={handleImageChange}
+        className="mb-4 p-2 border rounded"
+      />
+      <button
+        onClick={convertImageToText}
+        disabled={loading}
+        className="bg-blue-500 text-white px-4 py-2 rounded mb-4 disabled:bg-gray-400"
+      >
         {loading ? "Converting..." : "Convert Image to Text"}
       </button>
-      <div className="flex ">
-        <div className="h-[25rem] w-[50rem] border border-black p-3 ">
+      <div className="sm:flex sm:mt-4 felx-col ">
+        <div className="sm:w-1/2 h-96 border border-black p-3 mr-2 overflow-auto">
           {image &&
-            <img src={image} alt="Selected" style={{ maxWidth: "100%" }} />}
+            <img src={image} alt="Selected" className="max-w-full h-auto" />}
         </div>
-        <div>
-          <h3>Extracted Text:</h3>
-          <p className="border-black border">
+        <div className="sm:w-1/2 h-96 border border-black p-3 ml-2 overflow-auto">
+          <h3 className="text-xl font-semibold mb-2">Extracted Text:</h3>
+          <p>
             {text}
           </p>
         </div>
       </div>
+      <Link to={`/`} className="underline  hover:text-gray-600"> Return to Home</Link>
     </div>
   );
 };
