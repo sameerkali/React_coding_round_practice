@@ -1,14 +1,13 @@
-import React from 'react'
-import GoToHome from '../../Components/GoToHome'
+import React from "react";
+import GoToHome from "../../Components/GoToHome";
 
 const Seventeen = () => {
   return (
     <div>
-
       <h1>seventeen</h1>
-      <GoToHome/>
+      <GoToHome />
     </div>
-  )
-}
+  );
+};
 
-export default Seventeen
+export default Seventeen;
