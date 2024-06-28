@@ -78,6 +78,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Tesseract from "tesseract.js";
+import GoToHome from "../../Components/GoToHome";
 
 const Sixteen = () => {
   const [image, setImage] = useState(null);
@@ -163,9 +164,7 @@ const Sixteen = () => {
         <p>{text}</p>
       </div>
     </div>
-    <Link to={`/`} className="underline hover:text-gray-600">
-      Return to Home
-    </Link>
+    <GoToHome/>
   </div>
   );
 };
