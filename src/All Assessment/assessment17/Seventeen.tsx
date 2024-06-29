@@ -32,10 +32,11 @@ const Seventeen: React.FC = () => {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       if (ctx) {
-        ctx.strokeStyle = isErasing ? 'white' : color;
+        ctx.strokeStyle = color;
         ctx.lineWidth = isErasing ? 40 : 4;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
+        ctx.globalCompositeOperation = isErasing ? 'destination-out' : 'source-over';
       }
     }
   }, [color, isErasing]);
@@ -83,10 +84,14 @@ const Seventeen: React.FC = () => {
   };
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = signature;
-    link.download = 'signature.png';
-    link.click();
+    const canvas = canvasRef.current;
+    if (canvas) {
+      // Create download link with transparent background
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/png');
+      link.download = 'signature.png';
+      link.click();
+    }
   };
 
   const handleReset = () => {
@@ -121,11 +126,6 @@ const Seventeen: React.FC = () => {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Draw your imagination</h1>
       <GoToHome />
-      {/* {showPrompt && (
-        <div className="absolute top-[40%] left-[40%] bg-white p-4 border border-black rounded shadow">
-          <p>This app is 100% prompt coded, by Sameer Faridi</p>
-        </div>
-      )} */}
       <div className="flex flex-col items-center space-y-4">
         <div className="flex justify-center items-center">
           <canvas
