@@ -5,7 +5,8 @@ const Seventeen: React.FC = () => {
   const [signature, setSignature] = useState('');
   const [color, setColor] = useState('black');
   const [isErasing, setIsErasing] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(true); // State to control prompt visibility
+  const [showPrompt, setShowPrompt] = useState(true);
+  const [isDrawing, setIsDrawing] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -33,40 +34,46 @@ const Seventeen: React.FC = () => {
       if (ctx) {
         ctx.strokeStyle = isErasing ? 'white' : color;
         ctx.lineWidth = isErasing ? 40 : 4;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
       }
     }
   }, [color, isErasing]);
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
+  const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
+    setIsDrawing(true);
     const canvas = canvasRef.current;
     if (canvas) {
       const ctx = canvas.getContext('2d');
       if (ctx) {
         const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const x = 'touches' in e ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
+        const y = 'touches' in e ? e.touches[0].clientY - rect.top : e.clientY - rect.top;
         ctx.beginPath();
         ctx.moveTo(x, y);
-        ctx.stroke();
       }
     }
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
+  const draw = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault();
+    if (!isDrawing) return;
     const canvas = canvasRef.current;
-    if (canvas && e.buttons === 1) {
+    if (canvas) {
       const ctx = canvas.getContext('2d');
       if (ctx) {
         const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const x = 'touches' in e ? e.touches[0].clientX - rect.left : e.clientX - rect.left;
+        const y = 'touches' in e ? e.touches[0].clientY - rect.top : e.clientY - rect.top;
         ctx.lineTo(x, y);
         ctx.stroke();
       }
     }
   };
 
-  const handleMouseUp = () => {
+  const endDrawing = () => {
+    setIsDrawing(false);
     const canvas = canvasRef.current;
     if (canvas) {
       const signatureDataURL = canvas.toDataURL();
@@ -106,7 +113,7 @@ const Seventeen: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPrompt(false);
-    }, 2000); // Hide the prompt after 5 seconds
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -114,35 +121,37 @@ const Seventeen: React.FC = () => {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Draw your imagination</h1>
       <GoToHome />
-      {showPrompt && (
+      {/* {showPrompt && (
         <div className="absolute top-[40%] left-[40%] bg-white p-4 border border-black rounded shadow">
           <p>This app is 100% prompt coded, by Sameer Faridi</p>
         </div>
-      )}
+      )} */}
       <div className="flex flex-col items-center space-y-4">
         <div className="flex justify-center items-center">
           <canvas
             ref={canvasRef}
-            width={window.innerWidth < 640 ? 300 : 1400}  // width: 300px on small screens, 800px on larger screens
-            height={window.innerWidth < 640 ? 600 : 500} // height: 600px on small screens, 400px on larger screens
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            className="border border-black"
+            width={window.innerWidth < 640 ? 350 : 1400}
+            height={window.innerWidth < 640 ? 500 : 500}
+            onMouseDown={startDrawing}
+            onMouseMove={draw}
+            onMouseUp={endDrawing}
+            onMouseLeave={endDrawing}
+            onTouchStart={startDrawing}
+            onTouchMove={draw}
+            onTouchEnd={endDrawing}
+            className="border border-black touch-none"
           />
         </div>
-        <div className="flex flex-wrap space-x-4">
+        <div className="">
           <button
             onClick={handleReset}
-            className="custom-button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            className="custom-button text-white font-bold py-2 px-4 rounded"
           >
             Reset
           </button>
           <button
             onClick={handleEraser}
-            className={`custom-button ${ 
-              isErasing ? 'bg-red-800' : 'bg-gray-500'
-            } hover:bg-gray-700 text-white font-bold py-2 px-6 rounded`}
+            className="custom-button text-white font-bold py-2 px-6 rounded"
           >
             Eraser
           </button>
