@@ -75,14 +75,15 @@
 
 
 
-
 import React, { useState, useEffect } from 'react';
+import GoToHome from '../../Components/GoToHome';
 
 const Eighteen = () => {
   const [text, setText] = useState(
-    "नमस्ते, यह हिंदी टेक्स्ट-टू-स्पीच रूपांतरण के लिए एक नमूना पाठ है।"
+    "paste your text here to convert it into speach "
   );
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isPaused, setIsPaused] = useState(false); // State for pause button
 
   useEffect(() => {
     if (window.responsiveVoice) {
@@ -98,13 +99,19 @@ const Eighteen = () => {
 
   const handleSpeak = () => {
     if (window.responsiveVoice) {
-      if (isSpeaking) {
-        window.responsiveVoice.cancel();
-        setIsSpeaking(false);
-      } else {
+      if (isSpeaking && !isPaused) { // Pause functionality
+        window.responsiveVoice.pause();
+        setIsPaused(true);
+      } else if (isSpeaking && isPaused) { // Resume functionality
+        window.responsiveVoice.resume();
+        setIsPaused(false);
+      } else { // Play functionality
         window.responsiveVoice.speak(text, "Hindi Female", {
           onstart: () => setIsSpeaking(true),
-          onend: () => setIsSpeaking(false),
+          onend: () => {
+            setIsSpeaking(false);
+            setIsPaused(false); // Reset pause state on end
+          },
         });
       }
     } else {
@@ -114,6 +121,7 @@ const Eighteen = () => {
 
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
+    <GoToHome/>
       <textarea
         value={text}
         onChange={handleTextChange}
@@ -125,11 +133,15 @@ const Eighteen = () => {
           marginBottom: '10px',
           fontFamily: 'Arial, sans-serif',
           fontSize: '16px',
+          border: '1px solid black',
         }}
       />
       <div>
         <button onClick={handleSpeak} style={buttonStyle}>
-          {isSpeaking ? 'रुकें' : 'बोलें'}
+          {isSpeaking && !isPaused ? 'stop' : 'speak'}
+        </button>
+        <button onClick={handleSpeak} style={buttonStyle}>
+          {isSpeaking && isPaused ? 'play' : 'pause'}
         </button>
       </div>
     </div>
