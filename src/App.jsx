@@ -22,6 +22,7 @@ import Fourteen from "./All Assessment/assessment14/Fourteen";
 import Fifteen from "./All Assessment/assessment15/Fifteen";
 import Sixteen from "./All Assessment/assessment16/Sixteen";
 import Seventeen from "./All Assessment/assessment17/Seventeen";
+import Eighteen from "./All Assessment/assessment18/Eighteen";
 
 const App = () => {
   return (
@@ -50,6 +51,7 @@ const App = () => {
         <Route path="/fifteen" element={<Fifteen />} />
         <Route path="/sixteen" element={<Sixteen />} />
         <Route path="/seventeen" element={<Seventeen />} />
+        <Route path="/eighteen" element={<Eighteen />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
