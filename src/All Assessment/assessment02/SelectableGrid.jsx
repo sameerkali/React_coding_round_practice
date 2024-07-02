@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import "../../index.css";
 import GoToHome from "../../Components/GoToHome";
 
-const Two = ({ rows = 10, cols = 10 }) => {
+const SelectableGrid = ({ rows = 10, cols = 10 }) => {
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [selectedBoxes, setSelectedBoxes] = useState([]);
 
@@ -73,4 +73,4 @@ const Two = ({ rows = 10, cols = 10 }) => {
   );
 };
 
-export default Two;
+export default SelectableGrid;

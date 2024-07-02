@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Page02 from './Page02'
 
-const Thirteen = () => {
+const Breadcrumbs = () => {
   return (
     <div className='flex flex-col justify-center items-center h-screen'>
     <Link to={`/`} className='text-3xl font-bold underline'>Home</Link>
@@ -21,4 +21,4 @@ const Thirteen = () => {
   )
 }
 
-export default Thirteen
+export default Breadcrumbs;

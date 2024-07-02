@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GoToHome from "../../Components/GoToHome";
 
-const Six = () => {
+const SearchSuggestions = () => {
 
   const [searchKeys, setSearchKeys] = useState("");
   const [apiData, setApiData] = useState([]);
@@ -50,4 +50,4 @@ const Six = () => {
   );
 };
 
-export default Six;
+export default SearchSuggestions;

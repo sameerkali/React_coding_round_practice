@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GoToHome from "../../Components/GoToHome";
 
-const Three = () => {
+const PasswordGenerator = () => {
   const [password, setPassword] = useState("");
   const [characterLength, setCharacterLength] = useState(8);
   const [includeUpper, setIncludeUpper] = useState(true);
@@ -138,4 +138,4 @@ const Three = () => {
   );
 };
 
-export default Three;
+export default PasswordGenerator;

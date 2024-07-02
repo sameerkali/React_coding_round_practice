@@ -80,7 +80,7 @@ import { Link } from "react-router-dom";
 import Tesseract from "tesseract.js";
 import GoToHome from "../../Components/GoToHome";
 
-const Sixteen = () => {
+const ImageToTextConverter = () => {
   const [image, setImage] = useState(null);
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
@@ -169,4 +169,4 @@ const Sixteen = () => {
   );
 };
 
-export default Sixteen;
+export default ImageToTextConverter;

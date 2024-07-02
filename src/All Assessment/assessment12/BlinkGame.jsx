@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Twelve = () => {
+const BlinkGame = () => {
   const [blink, setBlink] = useState(null);
   const [success, setSuccess] = useState(null);
   const [fail, setFail] = useState(null);
@@ -76,4 +76,4 @@ const Twelve = () => {
   );
 };
 
-export default Twelve;
+export default BlinkGame;

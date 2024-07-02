@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GoToHome from '../../Components/GoToHome'
 
-const Nine = () => {
+const TabsComposition = () => {
   const [select, setSelect] = useState('first')
 
   return (
@@ -26,7 +26,7 @@ const Nine = () => {
   );
 };
 
-export default Nine;
+export default TabsComposition;
 
 const First = () => {
   return (

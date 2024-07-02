@@ -1,7 +1,7 @@
 import React from "react";
 import OtpForm from "./OtpForm";
 
-const Fourteen = () => {
+const OtpLogin = () => {
   return (
     <div>
       <div>
@@ -12,4 +12,4 @@ const Fourteen = () => {
   );
 };
 
-export default Fourteen;
+export default OtpLogin;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GoToHome from '../../Components/GoToHome';
 import '../../index.css';
 
-const Seven = () => {
+const ColorChangingButton = () => {
   const [color, setColor] = useState('000000');
 
   const handleChangeColor = () => {
@@ -27,7 +27,7 @@ const Seven = () => {
   );
 };
 
-export default Seven;
+export default ColorChangingButton;
 
 
 

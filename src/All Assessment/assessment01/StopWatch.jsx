@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../../index.css'
 import GoToHome from "../../Components/GoToHome";
 
-const One = () => {
+const StopWatch = () => {
   const [clicked, setClicked] = useState(false);
   const [time, setTime] = useState(0);
 
@@ -37,4 +37,4 @@ const One = () => {
   );
 };
 
-export default One;
+export default StopWatch;

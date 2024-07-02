@@ -7,7 +7,7 @@ import GoToHome from "../../Components/GoToHome";
 const ITEMS_PER_PAGE = 6;
 const API_ENDPOINT = "https://hacker-news.firebaseio.com/v0";
 
-export default function Eleven() {
+export default function JobBoardApi() {
   const [items, setItems] = useState([]);
   const [itemIds, setItemIds] = useState(null);
   const [fetchingDetails, setFetchingDetails] = useState(false);

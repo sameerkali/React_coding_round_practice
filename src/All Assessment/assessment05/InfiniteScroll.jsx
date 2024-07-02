@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GoToHome from "../../Components/GoToHome";
 
-const Five = () => {
+const InfiniteScroll = () => {
   const [count, setCount] = useState(50);
 
   useEffect(() => {
@@ -37,5 +37,5 @@ const Five = () => {
   );
 };
 
-export default Five;
+export default InfiniteScroll;
 

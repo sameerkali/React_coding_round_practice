@@ -3,7 +3,7 @@ import GoToHome from "../../Components/GoToHome";
 import "./style.css";
 import { MAX, MIN } from "./constants";
 
-const Four = () => {
+const ProgressBar = () => {
   const [value, setValue] = useState(0);
   const [success, setSuccess] = useState(false);
   useEffect(() => {
@@ -16,7 +16,7 @@ const Four = () => {
       <div className="flex justify-center items-center flex-col h-screen">
         <h1>Progress bar</h1>
         <div className="mb-56 flex flex-col">
-          <ProgressBar value={value} onComplete={() => setSuccess(true)} />
+          <ProgressBarr value={value} onComplete={() => setSuccess(true)} />
           <span className="">
             {success ? "Complete!" : "Loading..."}
           </span>
@@ -29,7 +29,7 @@ const Four = () => {
 };
 
 
-function ProgressBar({ value = 0, onComplete = () => {} }) {
+function ProgressBarr({ value = 0, onComplete = () => {} }) {
   const [percent, setPercent] = useState(value);
   
   useEffect(
@@ -61,10 +61,10 @@ function ProgressBar({ value = 0, onComplete = () => {} }) {
         aria-valuemin={MIN}
         aria-valuemax={MAX}
         aria-valuenow={percent}
-        role="progressbar"
+        role="ProgressBarr"
       />
     </div>
   );
 }
 
-export default Four;
+export default ProgressBar;

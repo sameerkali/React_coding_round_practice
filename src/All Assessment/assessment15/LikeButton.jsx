@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import {useState} from "react"
 
-const Fifteen = () => {
+const LikeButton = () => {
   const [like, setLike] = useState(false)
   console.log('====================================');
   console.log(like);
@@ -20,4 +20,4 @@ return(
 )
 }
 
-export default Fifteen;
+export default LikeButton;

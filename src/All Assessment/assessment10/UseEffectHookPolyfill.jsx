@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import useCustomffect from "./UseCustomEffect";
 import GoToHome from "../../Components/GoToHome";
 
-const Ten = () => {
+const UseEffectHookPolyfill = () => {
   const [count, setcount] = useState(0);
 
   /* useEffect Hook Polyfill */
@@ -30,4 +30,4 @@ const Ten = () => {
   );
 };
 
-export default Ten;
+export default UseEffectHookPolyfill;

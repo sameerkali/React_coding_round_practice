@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import GoToHome from '../../Components/GoToHome';
 
-const Seventeen: React.FC = () => {
+const DrawBoard: React.FC = () => {
   const [signature, setSignature] = useState('');
   const [color, setColor] = useState('black');
   const [isErasing, setIsErasing] = useState(false);
@@ -173,4 +173,4 @@ const Seventeen: React.FC = () => {
   );
 };
 
-export default Seventeen;
+export default DrawBoard;
