@@ -16,6 +16,15 @@ const Home = () => {
         style={{ border: "0", borderRadius: "6px", marginTop: "5rem" }}
       />
 
+      <a
+        href="https://github.com/sameerkali/React_coding_round_practice"
+        target="_blank"
+        rel="noopener noreferrer"
+        className=" mt-5 mb-8 text-gray-300 bg-[#21262d] px-3 py-1 rounded-md no-underline hover:no-underline hover:bg-[#21262Dc3]"
+      >
+        ⭐ Star on GitHub
+      </a>
+
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-center font-bold mb-8 text-[#a29bfe]">
         Practice Interview Problems
       </h1>
