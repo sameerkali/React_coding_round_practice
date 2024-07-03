@@ -10,7 +10,7 @@ export default {
         'lightblue': '#add8e6',
       },
       animation: {
-        marquee: 'marquee 25s linear infinite',
+        marquee: 'marquee 450s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
       },
       keyframes: {
@@ -25,5 +25,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }
