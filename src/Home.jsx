@@ -7,14 +7,11 @@ import Marquee from "./Components/Marquee";
 import Accordion from "./Components/Accordion";
 
 const Home = () => {
-  const { easy, medium, hard } = technicalRoundPreparation
   return (
     <div className="home min-h-screen flex flex-col items-center justify-center p-4 ">
       <Marquee/>
       <div>
-      <Accordion category="Easy" questions={easy} />
-      <Accordion category="Medium" questions={medium} />
-      <Accordion category="Hard" questions={hard} />
+      {/* <Accordion  /> */}
     </div>
       <iframe
         src="https://github.com/sponsors/sameerkali/button"
