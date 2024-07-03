@@ -24,6 +24,7 @@ import ImageToTextConverter from "./All Assessment/assessment16/ImageToTextConve
 import DrawBoard from "./All Assessment/assessment17/DrawBoard";
 import TextToSpeech from "./All Assessment/assessment18/TextToSpeech";
 import Card from "./Components/Card";
+import Marquee from "./Components/Marquee";
 
 const App = () => {
   return (
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/textToSpeech" element={<TextToSpeech />} />
         <Route path="*" element={<Page404 />} />
         <Route path="card" element={<Card />} />
+        <Route path="mq" element={<Marquee />} />
       </Routes>
     </BrowserRouter>
   );

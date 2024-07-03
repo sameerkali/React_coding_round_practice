@@ -1,13 +1,14 @@
-// HomePage.jsx
 
 import React from "react";
 import "./index.css";
 import Card from "./Components/Card";
 import { buttonDetails } from "./Utils";
+import Marquee from "./Components/Marquee";
 
 const Home = () => {
   return (
     <div className="home min-h-screen flex flex-col items-center justify-center p-4 ">
+      <Marquee/>
       <iframe
         src="https://github.com/sponsors/sameerkali/button"
         title="Sponsor sameerkali"
