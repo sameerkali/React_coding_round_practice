@@ -1,11 +1,7 @@
 export const buttonDetails = [
   {
-    name: "StopWatch",
-    description: "A stopwatch to measure time intervals."
-  },
-  {
-    name: "SelectableGrid",
-    description: "A grid with selectable cells."
+    name: "InfiniteScroll",
+    description: "Infinite scrolling for loading content."
   },
   {
     name: "PasswordGenerator",
@@ -16,13 +12,26 @@ export const buttonDetails = [
     description: "A customizable progress bar."
   },
   {
-    name: "InfiniteScroll",
-    description: "Infinite scrolling for loading content."
+    name: "JobBoardApi",
+    description: "API for job board functionalities."
+  },
+  {
+    name: "BlinkGame",
+    description: "A simple blink reaction game."
   },
   {
     name: "SearchSuggestions",
     description: "Search with live suggestions."
   },
+  {
+    name: "StopWatch",
+    description: "A stopwatch to measure time intervals."
+  },
+  {
+    name: "SelectableGrid",
+    description: "A grid with selectable cells."
+  },
+
   {
     name: "ColorChangingButton",
     description: "A button that changes color on click."
@@ -39,14 +48,7 @@ export const buttonDetails = [
     name: "UseEffectHookPolyfill",
     description: "A polyfill for the useEffect hook."
   },
-  {
-    name: "JobBoardApi",
-    description: "API for job board functionalities."
-  },
-  {
-    name: "BlinkGame",
-    description: "A simple blink reaction game."
-  },
+
   {
     name: "Breadcrumbs",
     description: "Breadcrumb navigation component."
@@ -73,8 +75,6 @@ export const buttonDetails = [
   }
 ];
 
-
- 
 export const technicalRoundPreparation = {
   easy: [
     "Stop Watch",
@@ -212,7 +212,4 @@ export const technicalRoundPreparation = {
     "Chat Interface",
     "Accessible Form"
   ]
-  
 };
-
-

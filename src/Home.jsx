@@ -45,6 +45,7 @@ const Home = () => {
           )}
         </div>
       </div>
+        <h1>sameer</h1>
     </div>
   );
 };
