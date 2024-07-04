@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home min-h-screen flex flex-col items-center justify-center p-4 ">
+    //Black UI
+    <div className="bwgradient min-h-screen flex flex-col items-center justify-center p-4 ">
+    {/*  <div className="home min-h-screen flex flex-col items-center justify-center p-4 "> */}
       <Marquee/>
       <div>
       {/* <Accordion  /> */}
