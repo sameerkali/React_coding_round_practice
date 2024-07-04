@@ -5,6 +5,7 @@ import Card from "./Components/Card";
 import { buttonDetails, technicalRoundPreparation } from "./Utils";
 import Marquee from "./Components/Marquee";
 import Accordion from "./Components/Accordion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -45,7 +46,9 @@ const Home = () => {
           )}
         </div>
       </div>
-        <h1>sameer</h1>
+      <Link to={`/problems`}>
+        <h1>All problems</h1>
+      </Link>
     </div>
   );
 };
