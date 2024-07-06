@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function ProblemsPage() {
   return (
-    <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient ">
+    <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient h-screen">
       <div className="w-full max-w-md flex flex-col h-full">
-        <div className="mb-6">
+        <div className="mb-6 h-[8rem]">
           <div className="flex gap-1">
             <Link to={`/`}>
               <p>Home</p>
@@ -20,8 +20,8 @@ export default function ProblemsPage() {
             detailed description.
           </p>
         </div>
-        <TabGroup className="flex-grow flex flex-col overflow-hidden  ">
-          <TabList className="flex gap-4 overflow-x-auto scrollbar-hide">
+        <TabGroup className="flex-grow flex flex-col overflow-hidden">
+          <TabList className="flex gap-4 overflow-x-auto scrollbar-hide flex-shrink-0">
             {categories.map(({ id, name }) =>
               <Tab
                 key={id}
@@ -31,7 +31,7 @@ export default function ProblemsPage() {
               </Tab>
             )}
           </TabList>
-          <TabPanels className="mt-3 flex-grow overflow-y-auto scrollbar-hide h-[]">
+          <TabPanels className="mt-3 flex-grow overflow-y-auto scrollbar-hide" style={{ height: 'calc(100vh - 16rem)' }}>
             {categories.map(({ id, name, posts }) =>
               <TabPanel key={id} className="rounded-xl bg-white/5 p-3 h-full">
                 <ul>
@@ -40,8 +40,7 @@ export default function ProblemsPage() {
                       key={post.id}
                       className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5"
                     >
-                      <a href={post.link} className="font-semibold text-white">
-                        <span className="absolute inset-0" />
+                      <a target="_blank" href={post.link} className="font-semibold text-white">
                         {post.title}
                       </a>
                       <p className="text-white/75">
