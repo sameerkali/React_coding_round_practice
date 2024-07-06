@@ -325,6 +325,8 @@ export default function ProblemsPage() {
             ))}
           </TabPanels>
         </TabGroup>
+
+      <p className="mt-40" >the work is pending because I need sleep, after office I have lots of work I need help if you read this DM me on linkedIn </p>
       </div>
     </div>
   );
