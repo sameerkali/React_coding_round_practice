@@ -1,12 +1,20 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { categories } from "../../Utils";
+import { Link } from "react-router-dom";
 
 export default function ProblemsPage() {
   return (
     <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient ">
       <div className="w-full max-w-md flex flex-col h-full">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-white mb-4">Problems Page</h1>
+          <div className="flex gap-1">
+            <Link to={`/`}>
+              <p>Home</p>
+            </Link>
+            <p> / </p>
+            <p>Problems</p>
+          </div>
+          <h1 className="text-2xl font-bold text-white mb-4">Problems</h1>
           <p className="text-white">
             Browse through the different categories of problems, each with a
             detailed description.
