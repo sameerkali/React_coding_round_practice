@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { categories } from "../../Utils";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Header from "../Header";
 
 export default function ProblemsPage() {
   const [checkedItems, setCheckedItems] = useState(() => {
@@ -28,13 +28,13 @@ export default function ProblemsPage() {
     <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient h-screen">
     <div className="absolute top-0 ">
 
-    <Footer/>
+    <Header/>
     </div>
       <div className="w-full max-w-md flex flex-col h-full">
         <div className="mb-6 h-[8rem]">
           <div className="flex gap-1">
             <Link to={`/`}>
-              <p>Home</p>
+              <p className="underline">Home</p>
             </Link>
             <p> / </p>
             <p>Problems</p>

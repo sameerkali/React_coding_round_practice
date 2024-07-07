@@ -6,6 +6,7 @@ import Marquee from "./Components/Marquee";
 import { Link } from "react-router-dom";
 import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 import Footer from "./Components/Footer";
+import Feedback from "./Components/Feedback";
 
 const Home = () => {
   const gaEventTracker = useAnalyticsEventTracker("Home");
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <div className="bwgradient min-h-screen flex flex-col items-center justify-center p-4 ">
       <Marquee />
+      <Feedback/>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-center font-bold mb-8 bg-gradient-to-r from-[#9A8D9B] via-[#575A79] to-[#2C2E4D] inline-block text-transparent bg-clip-text">
         Practice Interview Problems
