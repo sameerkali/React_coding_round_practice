@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Page404 from "./Page404";
 import Page01 from "./All Assessment/assessment13/Page01";
@@ -26,10 +26,25 @@ import TextToSpeech from "./All Assessment/assessment18/TextToSpeech";
 import Card from "./Components/Card";
 import Marquee from "./Components/Marquee";
 import ProblemsPage from "./Components/allProblems/ProblemsPage";
+//setup google analytics
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-R3DJ0V5QK6");
+
+function PageViewTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname, title: location.pathname });
+  }, [location]);
+
+  return null;
+}
 
 const App = () => {
   return (
     <BrowserRouter>
+          <PageViewTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stopWatch" element={<StopWatch />} />
