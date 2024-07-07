@@ -28,6 +28,7 @@ import Marquee from "./Components/Marquee";
 import ProblemsPage from "./Components/allProblems/ProblemsPage";
 //setup google analytics
 import ReactGA from "react-ga4";
+import Feedback from "./Components/Feedback";
 
 ReactGA.initialize("G-R3DJ0V5QK6");
 
@@ -80,6 +81,7 @@ const App = () => {
         <Route path="card" element={<Card />} />
         <Route path="mq" element={<Marquee />} />
         <Route path="/problems" element={<ProblemsPage />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </BrowserRouter>
   );

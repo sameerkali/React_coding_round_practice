@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import DOMPurify from "dompurify";
+import { useNavigate } from "react-router-dom";
 
-export default function ContactMenu() {
+export default function Feedback() {
+  const navigate = useNavigate();
   const initialState = {
     name: "",
     email: "",
@@ -50,6 +52,8 @@ export default function ContactMenu() {
         setFormData(initialState);
         setErrors({});
         setIsSent(true);
+        alert("Email sent successfully")
+        navigate('/');
       })
       .catch(error => {
         console.error("Email sending failed", error);
@@ -86,13 +90,15 @@ export default function ContactMenu() {
   };
 
   return (
-    <section className=" bg-purple-100/10 sm:p-10 ">
+    <section className=" bwgradient sm:p-10 ">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl h-[3rem] tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Feedback Form
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-        Help us improve & contribute: navigation, features, content, code, Q&A! Let's build something great!        </p>
+          Help us improve & contribute: navigation, features, content, code,
+          Q&A! Let's build something great!{" "}
+        </p>
         {!isSent &&
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>

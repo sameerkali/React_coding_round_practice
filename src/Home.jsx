@@ -14,29 +14,33 @@ const Home = () => {
   return (
     <div className="bwgradient min-h-screen flex flex-col items-center justify-center p-4 ">
       <Marquee />
-      <Feedback/>
-
+      {/* <Feedback/> */}
       <h1 className="text-4xl sm:text-5xl md:text-6xl text-center font-bold mb-8 bg-gradient-to-r from-[#9A8D9B] via-[#575A79] to-[#2C2E4D] inline-block text-transparent bg-clip-text">
         Practice Interview Problems
       </h1>
-
+      <p className="m-10 text-center">
+        {" "}Help us improve! Share your honest{" "}
+        <Link to={`/feedback`}>
+          <strong className="text-lime-400 underline text-xl">feedback</strong>
+        </Link>
+        {" "}for a better user experience.
+      </p>{" "}
       <div className="flex justify-center w-full">
         <div className="px-10 sm:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl justify-items-center mb-10">
-          {buttonDetails.map(({ name, description }) => (
+          {buttonDetails.map(({ name, description }) =>
             <Card
               key={name}
               name={name}
               description={description}
               linkName={name}
-              onClick={() => gaEventTracker('click', `Card - ${name}`)}
+              onClick={() => gaEventTracker("click", `Card - ${name}`)}
             />
-          ))}
+          )}
         </div>
       </div>
-
-      <Link 
+      <Link
         to={`/problems`}
-        onClick={() => gaEventTracker('click', 'All Problems Button')}
+        onClick={() => gaEventTracker("click", "All Problems Button")}
       >
         <p className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-gray-500 transition duration-300 ease-out border-2 border-slate-700 rounded-full shadow-md group w-72">
           <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-black group-hover:translate-x-0 ease">
@@ -61,7 +65,7 @@ const Home = () => {
           <span className="relative invisible">All problems</span>
         </p>
       </Link>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
