@@ -86,94 +86,105 @@ export default function ContactMenu() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
-      {!isSent &&
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name:
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.name
-                ? "border-red-500"
-                : "border-gray-300"} rounded-md shadow-sm`}
+    <section className=" bg-purple-100/10 sm:p-10 ">
+      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 className="mb-4 text-4xl h-[3rem] tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+          Feedback Form
+        </h2>
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+        Help us improve & contribute: navigation, features, content, code, Q&A! Let's build something great!        </p>
+        {!isSent &&
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div>
+              <label
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.name
+                  ? "border-red-500"
+                  : ""}`}
+                placeholder="dickdas pussya"
+                value={formData.name}
+                onChange={handleChange}
+                disabled={isLoading}
+                required
+              />
+              {errors.name &&
+                <span className="text-red-500 text-sm">
+                  {errors.name}
+                </span>}
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.email
+                  ? "border-red-500"
+                  : ""}`}
+                placeholder="your@email.co.in"
+                value={formData.email}
+                onChange={handleChange}
+                disabled={isLoading}
+                required
+              />
+              {errors.email &&
+                <span className="text-red-500 text-sm">
+                  {errors.email}
+                </span>}
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="feedback"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+              >
+                Feedback
+              </label>
+              <textarea
+                id="feedback"
+                name="feedback"
+                rows="6"
+                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-secoundry-500 focus:border-secoundry-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 ${errors.feedback
+                  ? "border-red-500"
+                  : ""}`}
+                placeholder="Leave a feedback..."
+                value={formData.feedback}
+                onChange={handleChange}
+                disabled={isLoading}
+                required
+              />
+              {errors.feedback &&
+                <span className="text-red-500 text-sm">
+                  {errors.feedback}
+                </span>}
+            </div>
+            <button
+              type="submit"
+              className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-secoundry-700 sm:w-fit hover:bg-secoundry-800 focus:ring-4 focus:outline-none focus:ring-secoundry-300 dark:bg-secoundry-600 dark:hover:bg-secoundry-700 dark:focus:ring-secoundry-800 border border-[#324054]"
               disabled={isLoading}
-            />
-            {errors.name &&
-              <span className="text-red-500 text-sm">
-                {errors.name}
-              </span>}
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
             >
-              Email:
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.email
-                ? "border-red-500"
-                : "border-gray-300"} rounded-md shadow-sm`}
-              disabled={isLoading}
-            />
-            {errors.email &&
-              <span className="text-red-500 text-sm">
-                {errors.email}
-              </span>}
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="feedback"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Feedback:
-            </label>
-            <textarea
-              id="feedback"
-              name="feedback"
-              placeholder="Feedback"
-              value={formData.feedback}
-              onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.feedback
-                ? "border-red-500"
-                : "border-gray-300"} rounded-md shadow-sm`}
-              disabled={isLoading}
-            />
-            {errors.feedback &&
-              <span className="text-red-500 text-sm">
-                {errors.feedback}
-              </span>}
-          </div>
-          <button
-            type="submit"
-            className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md"
-            disabled={isLoading}
-          >
-            {isLoading ? "SENDING..." : "SUBMIT"}
-          </button>
-        </form>}
-      {isSent &&
-        <div className="text-center p-4">
-          <p className="text-lg font-bold text-green-500">SUCCESS!</p>
-          <p>Your feedback has been successfully sent!</p>
-          <p>You can safely leave this page.</p>
-        </div>}
-    </div>
+              {isLoading ? "SENDING..." : "SEND MESSAGE"}
+            </button>
+          </form>}
+        {isSent &&
+          <div className="text-center p-4">
+            <p className="text-lg font-bold text-green-500">SUCCESS!</p>
+            <p>Your feedback has been successfully sent!</p>
+            <p>You can safely leave this page.</p>
+          </div>}
+      </div>
+    </section>
   );
 }
