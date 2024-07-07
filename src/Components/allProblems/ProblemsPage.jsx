@@ -1,8 +1,27 @@
+import { useState, useEffect } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { categories } from "../../Utils";
 import { Link } from "react-router-dom";
 
 export default function ProblemsPage() {
+  const [checkedItems, setCheckedItems] = useState({});
+
+  useEffect(() => {
+    const storedCheckedItems = JSON.parse(localStorage.getItem("checkedItems")) || {};
+    setCheckedItems(storedCheckedItems);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("checkedItems", JSON.stringify(checkedItems));
+  }, [checkedItems]);
+
+  const handleCheckboxChange = (postId) => {
+    setCheckedItems((prev) => ({
+      ...prev,
+      [postId]: !prev[postId],
+    }));
+  };
+
   return (
     <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient h-screen">
       <div className="w-full max-w-md flex flex-col h-full">
@@ -40,9 +59,17 @@ export default function ProblemsPage() {
                       key={post.id}
                       className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5"
                     >
-                      <a target="_blank" href={post.link} className="font-semibold text-white">
-                        {post.title}
-                      </a>
+                      <div className="flex items-center">
+                        <input
+                          type="checkbox"
+                          checked={checkedItems[post.id] || false}
+                          onChange={() => handleCheckboxChange(post.id)}
+                          className="mr-2"
+                        />
+                        <a target="_blank" href={post.link} className="font-semibold text-white">
+                          {post.title}
+                        </a>
+                      </div>
                       <p className="text-white/75">
                         {post.description}
                       </p>
