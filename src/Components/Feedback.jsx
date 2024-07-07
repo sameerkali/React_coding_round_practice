@@ -6,22 +6,22 @@ export default function ContactMenu() {
   const initialState = {
     name: "",
     email: "",
-    feedback: "",
+    feedback: ""
   };
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
-    setFormData((prevFormData) => ({
+    setFormData(prevFormData => ({
       ...prevFormData,
-      [name]: value,
+      [name]: value
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const validateErrors = validateForm();
     if (Object.keys(validateErrors).length > 0) {
@@ -35,28 +35,23 @@ export default function ContactMenu() {
     const sanitizedData = {
       name: DOMPurify.sanitize(name),
       email: DOMPurify.sanitize(email),
-      feedback: DOMPurify.sanitize(feedback),
+      feedback: DOMPurify.sanitize(feedback)
     };
 
-    /*
-    REACT_APP_EMAILJS_SERVICE_ID="service_if0hb1c"
-REACT_APP_EMAILJS_TEMPLATE_ID="template_0lxmkao"
-REACT_APP_EMAILJS_USER_ID="izx7hhiiUs9y637go"
-    */
+    // i know this is very ensecure practice but it is currently in test mode (aut aapko maa ki kasam bhe hai aap ye keys nahi churaoge , thanks)
+    const serviceID = "service_if0hb1c";
+    const templateID = "template_0lxmkao";
+    const userID = "izx7hhiiUs9y637go";
 
-    const serviceID = 'service_if0hb1c';
-    const templateID = 'template_0lxmkao';
-    const userID = 'izx7hhiiUs9y637go';
-    
     emailjs
       .send(serviceID, templateID, sanitizedData, userID)
-      .then((response) => {
+      .then(response => {
         console.log("Email is sent successfully!", response.text);
         setFormData(initialState);
         setErrors({});
         setIsSent(true);
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Email sending failed", error);
       })
       .finally(() => {
@@ -85,17 +80,22 @@ REACT_APP_EMAILJS_USER_ID="izx7hhiiUs9y637go"
     return errors;
   };
 
-  const isValidEmail = (value) => {
+  const isValidEmail = value => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(value);
   };
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
-      {!isSent && (
+      {!isSent &&
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name:</label>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Name:
+            </label>
             <input
               type="text"
               id="name"
@@ -103,15 +103,23 @@ REACT_APP_EMAILJS_USER_ID="izx7hhiiUs9y637go"
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.name ? "border-red-500" : "border-gray-300"} rounded-md shadow-sm`}
+              className={`mt-1 p-2 w-full border ${errors.name
+                ? "border-red-500"
+                : "border-gray-300"} rounded-md shadow-sm`}
               disabled={isLoading}
             />
-            {errors.name && (
-              <span className="text-red-500 text-sm">{errors.name}</span>
-            )}
+            {errors.name &&
+              <span className="text-red-500 text-sm">
+                {errors.name}
+              </span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email:
+            </label>
             <input
               type="email"
               id="email"
@@ -119,27 +127,38 @@ REACT_APP_EMAILJS_USER_ID="izx7hhiiUs9y637go"
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.email ? "border-red-500" : "border-gray-300"} rounded-md shadow-sm`}
+              className={`mt-1 p-2 w-full border ${errors.email
+                ? "border-red-500"
+                : "border-gray-300"} rounded-md shadow-sm`}
               disabled={isLoading}
             />
-            {errors.email && (
-              <span className="text-red-500 text-sm">{errors.email}</span>
-            )}
+            {errors.email &&
+              <span className="text-red-500 text-sm">
+                {errors.email}
+              </span>}
           </div>
           <div className="mb-4">
-            <label htmlFor="feedback" className="block text-sm font-medium text-gray-700">Feedback:</label>
+            <label
+              htmlFor="feedback"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Feedback:
+            </label>
             <textarea
               id="feedback"
               name="feedback"
               placeholder="Feedback"
               value={formData.feedback}
               onChange={handleChange}
-              className={`mt-1 p-2 w-full border ${errors.feedback ? "border-red-500" : "border-gray-300"} rounded-md shadow-sm`}
+              className={`mt-1 p-2 w-full border ${errors.feedback
+                ? "border-red-500"
+                : "border-gray-300"} rounded-md shadow-sm`}
               disabled={isLoading}
-            ></textarea>
-            {errors.feedback && (
-              <span className="text-red-500 text-sm">{errors.feedback}</span>
-            )}
+            />
+            {errors.feedback &&
+              <span className="text-red-500 text-sm">
+                {errors.feedback}
+              </span>}
           </div>
           <button
             type="submit"
@@ -148,15 +167,13 @@ REACT_APP_EMAILJS_USER_ID="izx7hhiiUs9y637go"
           >
             {isLoading ? "SENDING..." : "SUBMIT"}
           </button>
-        </form>
-      )}
-      {isSent && (
+        </form>}
+      {isSent &&
         <div className="text-center p-4">
           <p className="text-lg font-bold text-green-500">SUCCESS!</p>
           <p>Your feedback has been successfully sent!</p>
           <p>You can safely leave this page.</p>
-        </div>
-      )}
+        </div>}
     </div>
   );
 }
