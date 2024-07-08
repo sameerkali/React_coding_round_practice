@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import DOMPurify from "dompurify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Feedback() {
   const navigate = useNavigate();
@@ -90,7 +90,14 @@ export default function Feedback() {
   };
 
   return (
-    <section className=" bwgradient sm:p-10 ">
+    <section className=" bwgradient sm:p-10 h-[100vh]">
+       <div className="flex gap-1">
+            <Link to={`/`}>
+              <p className="underline">Home</p>
+            </Link>
+            <p> / </p>
+            <p>Feedback</p>
+          </div>
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl h-[3rem] tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Feedback Form
@@ -112,7 +119,7 @@ export default function Feedback() {
                 type="text"
                 id="name"
                 name="name"
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.name
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.name
                   ? "border-red-500"
                   : ""}`}
                 placeholder="dickdas pussya"
@@ -137,7 +144,7 @@ export default function Feedback() {
                 type="email"
                 id="email"
                 name="email"
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.email
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.email
                   ? "border-red-500"
                   : ""}`}
                 placeholder="your@email.co.in"
@@ -162,7 +169,7 @@ export default function Feedback() {
                 id="feedback"
                 name="feedback"
                 rows="6"
-                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-secoundry-500 focus:border-secoundry-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 ${errors.feedback
+                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-secoundry-500 focus:border-secoundry-500 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 ${errors.feedback
                   ? "border-red-500"
                   : ""}`}
                 placeholder="Leave a feedback..."
