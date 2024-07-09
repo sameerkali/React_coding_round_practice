@@ -32,7 +32,7 @@ export default function ProblemsPage() {
     </div>
       <div className="w-full max-w-md flex flex-col h-full">
         <div className="mb-6 h-[8rem]">
-          <div className="flex gap-1">
+          <div className="flex text-white gap-1">
             <Link to={`/`}>
               <p className="underline">Home</p>
             </Link>
