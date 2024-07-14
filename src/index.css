@@ -63,7 +63,11 @@
 
 .bwgradient{
   background: rgb(255,255,255);
-background: linear-gradient(81deg, rgba(255, 255, 255, 0.224) 4%, rgba(0,0,0,1) 56%);
+background: linear-gradient(81deg, rgba(8, 7, 7, 0.75) 4%, rgb(0, 0, 0) 56%);
 }
 
 
+.custom-focus:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import DOMPurify from "dompurify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Feedback() {
   const navigate = useNavigate();
@@ -40,7 +42,7 @@ export default function Feedback() {
       feedback: DOMPurify.sanitize(feedback)
     };
 
-    // i know this is very ensecure practice but it is currently in test mode (aut aapko maa ki kasam bhe hai aap ye keys nahi churaoge , thanks)
+    // i know this is very insecure practice but it is currently in test mode (aut aapko maa ki kasam bhe hai aap ye keys nahi churaoge , thanks)
     const serviceID = "service_if0hb1c";
     const templateID = "template_0lxmkao";
     const userID = "izx7hhiiUs9y637go";
@@ -52,11 +54,12 @@ export default function Feedback() {
         setFormData(initialState);
         setErrors({});
         setIsSent(true);
-        alert("Email sent successfully")
-        navigate('/');
+        toast.success("Email sent successfully!");
+        setTimeout(() => navigate('/'), 2000);
       })
       .catch(error => {
         console.error("Email sending failed", error);
+        toast.error("Email sending failed. Please try again later.");
       })
       .finally(() => {
         setIsLoading(false);
@@ -90,16 +93,23 @@ export default function Feedback() {
   };
 
   return (
-    <section className=" bwgradient sm:p-10 ">
+    <section className="bwgradient sm:p-10 h-[100vh]">
+      <div className="flex gap-1 text-white">
+        <Link to={`/`}>
+          <p className="underline">Home</p>
+        </Link>
+        <p> / </p>
+        <p>Feedback</p>
+      </div>
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl h-[3rem] tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           Feedback Form
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
           Help us improve & contribute: navigation, features, content, code,
-          Q&A! Let's build something great!{" "}
+          Q&A! Let's build something great!
         </p>
-        {!isSent &&
+        {!isSent && (
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>
               <label
@@ -112,7 +122,7 @@ export default function Feedback() {
                 type="text"
                 id="name"
                 name="name"
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.name
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white custom-focus ${errors.name
                   ? "border-red-500"
                   : ""}`}
                 placeholder="dickdas pussya"
@@ -121,10 +131,11 @@ export default function Feedback() {
                 disabled={isLoading}
                 required
               />
-              {errors.name &&
+              {errors.name && (
                 <span className="text-red-500 text-sm">
                   {errors.name}
-                </span>}
+                </span>
+              )}
             </div>
             <div>
               <label
@@ -137,7 +148,7 @@ export default function Feedback() {
                 type="email"
                 id="email"
                 name="email"
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-secoundry-500 focus:border-secoundry-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 dark:shadow-sm-light ${errors.email
+                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white custom-focus ${errors.email
                   ? "border-red-500"
                   : ""}`}
                 placeholder="your@email.co.in"
@@ -146,10 +157,11 @@ export default function Feedback() {
                 disabled={isLoading}
                 required
               />
-              {errors.email &&
+              {errors.email && (
                 <span className="text-red-500 text-sm">
                   {errors.email}
-                </span>}
+                </span>
+              )}
             </div>
             <div className="sm:col-span-2">
               <label
@@ -162,7 +174,7 @@ export default function Feedback() {
                 id="feedback"
                 name="feedback"
                 rows="6"
-                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-secoundry-500 focus:border-secoundry-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secoundry-500 dark:focus:border-secoundry-500 ${errors.feedback
+                className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white custom-focus ${errors.feedback
                   ? "border-red-500"
                   : ""}`}
                 placeholder="Leave a feedback..."
@@ -171,26 +183,30 @@ export default function Feedback() {
                 disabled={isLoading}
                 required
               />
-              {errors.feedback &&
+              {errors.feedback && (
                 <span className="text-red-500 text-sm">
                   {errors.feedback}
-                </span>}
+                </span>
+              )}
             </div>
             <button
               type="submit"
-              className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-secoundry-700 sm:w-fit hover:bg-secoundry-800 focus:ring-4 focus:outline-none focus:ring-secoundry-300 dark:bg-secoundry-600 dark:hover:bg-secoundry-700 dark:focus:ring-secoundry-800 border border-[#324054]"
+              className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-secoundry-700 sm:w-fit hover:bg-secoundry-800 focus:ring-4 focus:outline-none focus:ring-secoundry-300 dark:bg-secoundry-600 dark:hover:bg-secoundry-700 dark:focus:ring-secoundry-800 border border-[#324054] custom-focus"
               disabled={isLoading}
             >
               {isLoading ? "SENDING..." : "SEND MESSAGE"}
             </button>
-          </form>}
-        {isSent &&
+          </form>
+        )}
+        {isSent && (
           <div className="text-center p-4">
             <p className="text-lg font-bold text-green-500">SUCCESS!</p>
             <p>Your feedback has been successfully sent!</p>
             <p>You can safely leave this page.</p>
-          </div>}
+          </div>
+        )}
       </div>
+      <ToastContainer />
     </section>
   );
 }
