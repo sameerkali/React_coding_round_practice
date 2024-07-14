@@ -29,6 +29,7 @@ import ProblemsPage from "./Components/allProblems/ProblemsPage";
 //setup google analytics
 import ReactGA from "react-ga4";
 import Feedback from "./Components/Feedback";
+import Code from "./Components/Code_Snippet/Code";
 
 ReactGA.initialize("G-R3DJ0V5QK6");
 
@@ -41,6 +42,13 @@ function PageViewTracker() {
 
   return null;
 }
+const exampleCode = `
+function greet(name) {
+  console.log(\`Hello, \${name}!\`);
+}
+
+greet('World');
+  `;
 
 const App = () => {
   return (
@@ -82,6 +90,7 @@ const App = () => {
         <Route path="mq" element={<Marquee />} />
         <Route path="/problems" element={<ProblemsPage />} />
         <Route path="/feedback" element={<Feedback />} />
+        <Route path="/code" element={<Code code={exampleCode} language="javascript" />} />
       </Routes>
     </BrowserRouter>
   );
