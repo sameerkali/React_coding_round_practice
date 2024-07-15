@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../../index.css'
 import GoToHome from "../../Components/GoToHome";
+// import GoToHome from "../../Components/GoToHome";
 
 const StopWatch = () => {
   const [clicked, setClicked] = useState(false);
