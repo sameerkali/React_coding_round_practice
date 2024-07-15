@@ -28,11 +28,11 @@ export default function ProblemsPage() {
     <div className="flex flex-col w-full items-center pt-24 px-4 bwgradient h-screen">
     <div className="absolute top-[-10px]">
 
-      <Header />
+      {/* <Header /> */}
     </div>
       <div className="w-full max-w-md flex flex-col h-full">
         <div className="mb-6 h-[8rem]">
-          <div className="flex gap-1">
+          <div className="flex text-white gap-1">
             <Link to={`/`}>
               <p className="underline">Home</p>
             </Link>
