@@ -36,9 +36,16 @@ ReactGA.initialize("G-R3DJ0V5QK6");
 function PageViewTracker() {
   const location = useLocation();
 
-  useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname, title: location.pathname });
-  }, [location]);
+  useEffect(
+    () => {
+      ReactGA.send({
+        hitType: "pageview",
+        page: location.pathname,
+        title: location.pathname
+      });
+    },
+    [location]
+  );
 
   return null;
 }
@@ -53,7 +60,7 @@ greet('World');
 const App = () => {
   return (
     <BrowserRouter>
-          <PageViewTracker />
+      <PageViewTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stopWatch" element={<StopWatch />} />
@@ -90,7 +97,10 @@ const App = () => {
         <Route path="mq" element={<Marquee />} />
         <Route path="/problems" element={<ProblemsPage />} />
         <Route path="/feedback" element={<Feedback />} />
-        <Route path="/code" element={<Code code={exampleCode} language="javascript" />} />
+        <Route
+          path="/code"
+          element={<Code code={exampleCode} language="javascript" />}
+        />
       </Routes>
     </BrowserRouter>
   );
