@@ -72,6 +72,10 @@ export const buttonDetails = [
   {
     name: "TextToSpeech",
     description: "Convert text to speech."
+  },
+  {
+    name: "Debouncing",
+    description: "Impliment Debouncing."
   }
 ];
 

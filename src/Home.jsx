@@ -6,7 +6,6 @@ import Marquee from "./Components/Marquee";
 import { Link } from "react-router-dom";
 import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 import Footer from "./Components/Footer";
-import Feedback from "./Components/Feedback";
 
 const Home = () => {
   const gaEventTracker = useAnalyticsEventTracker("Home");

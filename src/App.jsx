@@ -30,6 +30,7 @@ import ProblemsPage from "./Components/allProblems/ProblemsPage";
 import ReactGA from "react-ga4";
 import Feedback from "./Components/Feedback";
 import Code from "./Components/Code_Snippet/Code";
+import Debouncing from "./All Assessment/assessment19/Debouncing";
 
 ReactGA.initialize("G-R3DJ0V5QK6");
 
@@ -97,6 +98,7 @@ const App = () => {
         <Route path="mq" element={<Marquee />} />
         <Route path="/problems" element={<ProblemsPage />} />
         <Route path="/feedback" element={<Feedback />} />
+        <Route path="/debouncing" element={<Debouncing />} />
         <Route
           path="/code"
           element={<Code code={exampleCode} language="javascript" />}
