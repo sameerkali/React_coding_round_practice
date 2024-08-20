@@ -13,12 +13,25 @@ const FollowingCurser = () => {
       circle.style.top = `${e.clientY}px`;
     }, 100);
   };
+  const throttle = (func, delay) => {
+    let lastCall = 0;
+    
+    return function (...args) {
+      const now = Date.now();
+      if (now - lastCall >= delay) {
+        lastCall = now;
+        func(...args);
+      }
+    };
+  };
+
+  const throttledHandleMovement = throttle(handleMovement, 40);  
 
   return (
     <div
       ref={rootRef}
       className="flex h-screen items-center justify-center flex-col gap-10"
-      onMouseMove={handleMovement}
+      onMouseMove={throttledHandleMovement}
     >
       <div className="text-4xl font-sans">
         The Circle That Follows The Curser
