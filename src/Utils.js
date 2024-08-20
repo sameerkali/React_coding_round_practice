@@ -74,6 +74,9 @@ export const buttonDetails = [
     description: "Convert text to speech."
   },
   {
+    name: "following-curser",
+    description: "following curser."
+  },
     name: "Debouncing",
     description: "Impliment Debouncing."
   }
@@ -484,6 +487,7 @@ export const ServiceId = "service_gtb4j1e";
 
 export const Arun_M_questions = {
   questions: [
+    
     {
       id: 1,
       title: "Implement Debounce",
@@ -493,6 +497,16 @@ export const Arun_M_questions = {
       description: "Implement a debounce function.",
       difficulty: "easy",
       askedIn: ["Meta", "Google", "Flipkart", "IBM", "MakeMyTrip"]
+    },
+    {
+      id: 81,
+      title: "Following Curser",
+      date: "20 August 2024",
+      author: "sameerkali",
+      link: "https://github.com/sameerkali/React_coding_round_practice",
+      description: "A circle that follows the Curser",
+      difficulty: "easy",
+      askedIn: [""]
     },
     {
       id: 2,
@@ -1283,7 +1297,8 @@ export const Arun_M_questions = {
       description: "Enhance the accessibility of a web application by implementing ARIA roles and keyboard navigation.",
       difficulty: "medium",
       askedIn: ["Microsoft"]
-    }
+    },
+    
     
     
   ]
