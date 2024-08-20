@@ -42,7 +42,7 @@ export default function Feedback() {
       feedback: DOMPurify.sanitize(feedback)
     };
 
-    // i know this is very insecure practice but it is currently in test mode (aut aapko maa ki kasam bhe hai aap ye keys nahi churaoge , thanks)
+    // i know this is very insecure practice but it is currently in test mode 
     const serviceID = "service_if0hb1c";
     const templateID = "template_0lxmkao";
     const userID = "izx7hhiiUs9y637go";

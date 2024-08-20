@@ -77,6 +77,9 @@ export const buttonDetails = [
     name: "following-curser",
     description: "following curser."
   },
+    name: "Debouncing",
+    description: "Impliment Debouncing."
+  }
 ];
 
 export const technicalRoundPreparation = {
