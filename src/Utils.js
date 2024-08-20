@@ -72,7 +72,11 @@ export const buttonDetails = [
   {
     name: "TextToSpeech",
     description: "Convert text to speech."
-  }
+  },
+  {
+    name: "following-curser",
+    description: "following curser."
+  },
 ];
 
 export const technicalRoundPreparation = {
