@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Home";
 import Page404 from "./Page404";
 import Page01 from "./All Assessment/assessment13/Page01";
@@ -26,10 +26,46 @@ import TextToSpeech from "./All Assessment/assessment18/TextToSpeech";
 import Card from "./Components/Card";
 import Marquee from "./Components/Marquee";
 import ProblemsPage from "./Components/allProblems/ProblemsPage";
+//setup google analytics
+import ReactGA from "react-ga4";
+import Feedback from "./Components/Feedback";
+import Code from "./Components/Code_Snippet/Code";
+
+import FollowingCurser from "./All Assessment/assessment19/FollowingCurser";
+
+import Debouncing from "./All Assessment/assessment19/Debouncing";
+
+
+ReactGA.initialize("G-R3DJ0V5QK6");
+
+function PageViewTracker() {
+  const location = useLocation();
+
+  useEffect(
+    () => {
+      ReactGA.send({
+        hitType: "pageview",
+        page: location.pathname,
+        title: location.pathname
+      });
+    },
+    [location]
+  );
+
+  return null;
+}
+const exampleCode = `
+function greet(name) {
+  console.log(\`Hello, \${name}!\`);
+}
+
+greet('World');
+  `;
 
 const App = () => {
   return (
     <BrowserRouter>
+      <PageViewTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stopWatch" element={<StopWatch />} />
@@ -64,7 +100,14 @@ const App = () => {
         <Route path="*" element={<Page404 />} />
         <Route path="card" element={<Card />} />
         <Route path="mq" element={<Marquee />} />
+        <Route path="/following-curser" element={<FollowingCurser />} />
         <Route path="/problems" element={<ProblemsPage />} />
+        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/debouncing" element={<Debouncing />} />
+        <Route
+          path="/code"
+          element={<Code code={exampleCode} language="javascript" />}
+        />
       </Routes>
     </BrowserRouter>
   );

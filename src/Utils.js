@@ -76,6 +76,12 @@ export const buttonDetails = [
   {
     name: "following-curser",
     description: "following curser."
+<<<<<<< HEAD
+=======
+  },
+    name: "Debouncing",
+    description: "Impliment Debouncing."
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
   }
 ];
 
@@ -481,8 +487,15 @@ export const categories = [
 
 export const ServiceId = "service_gtb4j1e";
 
+<<<<<<< HEAD
 export const Arun_M_questions = {
   questions: [
+=======
+
+export const Arun_M_questions = {
+  questions: [
+    
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
     {
       id: 1,
       title: "Implement Debounce",
@@ -493,7 +506,20 @@ export const Arun_M_questions = {
       difficulty: "easy",
       askedIn: ["Meta", "Google", "Flipkart", "IBM", "MakeMyTrip"]
     },
+<<<<<<< HEAD
 
+=======
+    {
+      id: 81,
+      title: "Following Curser",
+      date: "20 August 2024",
+      author: "sameerkali",
+      link: "https://github.com/sameerkali/React_coding_round_practice",
+      description: "A circle that follows the Curser",
+      difficulty: "easy",
+      askedIn: [""]
+    },
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
     {
       id: 2,
       title: "Implement Throttle",
@@ -522,6 +548,7 @@ export const Arun_M_questions = {
       link: "https://github.com/sameerkali/React_coding_round_practice",
       description: "Implement function currying with placeholders.",
       difficulty: "hard",
+<<<<<<< HEAD
       askedIn: [
         "Amazon",
         "Flipkart",
@@ -531,6 +558,9 @@ export const Arun_M_questions = {
         "Gojek",
         "Zeta"
       ]
+=======
+      askedIn: ["Amazon", "Flipkart", "Yandex", "Xiaomi", "Vimeo", "Gojek", "Zeta"]
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
     },
     {
       id: 5,
@@ -598,8 +628,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a system for automatically retrying failed promises.",
+=======
+      description: "Implement a system for automatically retrying failed promises.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Amazon", "Flipkart", "Adobe", "Paypal", "Swiggy"]
     },
@@ -611,6 +645,7 @@ export const Arun_M_questions = {
       link: "https://github.com/sameerkali/React_coding_round_practice",
       description: "Implement the Promise.all() method.",
       difficulty: "medium",
+<<<<<<< HEAD
       askedIn: [
         "TikTok",
         "Lyft",
@@ -621,6 +656,9 @@ export const Arun_M_questions = {
         "MindTickle",
         "Zepto"
       ]
+=======
+      askedIn: ["TikTok", "Lyft", "Snapchat", "Disney+ Hotstar", "MakeMyTrip", "Jio", "MindTickle", "Zepto"]
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
     },
     {
       id: 13,
@@ -978,8 +1016,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a custom version of the classnames library for React.",
+=======
+      description: "Implement a custom version of the classnames library for React.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Meta"]
     },
@@ -989,8 +1031,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a custom version of Redux using the Immer library.",
+=======
+      description: "Implement a custom version of Redux using the Immer library.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: []
     },
@@ -1030,8 +1076,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a virtualized list to efficiently render large lists of items.",
+=======
+      description: "Implement a virtualized list to efficiently render large lists of items.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Google"]
     },
@@ -1041,8 +1091,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Use the Context API to implement theme switching across a React application.",
+=======
+      description: "Use the Context API to implement theme switching across a React application.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Amazon"]
     },
@@ -1052,8 +1106,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a custom React hook for data fetching with error handling and loading states.",
+=======
+      description: "Create a custom React hook for data fetching with error handling and loading states.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Netflix"]
     },
@@ -1063,8 +1121,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Develop an image carousel component with auto-slide and manual navigation.",
+=======
+      description: "Develop an image carousel component with auto-slide and manual navigation.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Microsoft"]
     },
@@ -1074,8 +1136,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement form validation using Formik and Yup for a user registration form.",
+=======
+      description: "Implement form validation using Formik and Yup for a user registration form.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Apple"]
     },
@@ -1095,8 +1161,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a debounce function to limit the rate at which a function is executed.",
+=======
+      description: "Implement a debounce function to limit the rate at which a function is executed.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["LinkedIn"]
     },
@@ -1106,8 +1176,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a Markdown previewer that converts Markdown input to HTML in real-time.",
+=======
+      description: "Create a Markdown previewer that converts Markdown input to HTML in real-time.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Twitter"]
     },
@@ -1117,8 +1191,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a product filter component for an e-commerce website.",
+=======
+      description: "Implement a product filter component for an e-commerce website.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Shopify"]
     },
@@ -1138,8 +1216,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a real-time data visualization dashboard using D3.js and React.",
+=======
+      description: "Create a real-time data visualization dashboard using D3.js and React.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Tesla"]
     },
@@ -1149,8 +1231,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Build a dynamic form builder that allows users to create and customize forms.",
+=======
+      description: "Build a dynamic form builder that allows users to create and customize forms.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Salesforce"]
     },
@@ -1160,8 +1246,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a responsive navbar that collapses and expands based on screen size.",
+=======
+      description: "Create a responsive navbar that collapses and expands based on screen size.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Adobe"]
     },
@@ -1171,8 +1261,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Develop a weather application that uses geolocation to fetch weather data for the user's current location.",
+=======
+      description: "Develop a weather application that uses geolocation to fetch weather data for the user's current location.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["IBM"]
     },
@@ -1182,8 +1276,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a recipe finder app that fetches recipes from an external API based on user input.",
+=======
+      description: "Create a recipe finder app that fetches recipes from an external API based on user input.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Pinterest"]
     },
@@ -1193,8 +1291,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement custom scrollbars for a web application using CSS and JavaScript.",
+=======
+      description: "Implement custom scrollbars for a web application using CSS and JavaScript.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Slack"]
     },
@@ -1204,8 +1306,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create an animated SVG graphic using React and CSS animations.",
+=======
+      description: "Create an animated SVG graphic using React and CSS animations.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Spotify"]
     },
@@ -1215,8 +1321,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Develop a real-time collaborative text editor using WebSockets.",
+=======
+      description: "Develop a real-time collaborative text editor using WebSockets.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Dropbox"]
     },
@@ -1226,8 +1336,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Build a video player component with custom controls and full-screen functionality.",
+=======
+      description: "Build a video player component with custom controls and full-screen functionality.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["YouTube"]
     },
@@ -1237,8 +1351,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create an image gallery with a lightbox feature for viewing images in a modal.",
+=======
+      description: "Create an image gallery with a lightbox feature for viewing images in a modal.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Flickr"]
     },
@@ -1248,8 +1366,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Build a tool that converts Markdown input into HTML output in real-time.",
+=======
+      description: "Build a tool that converts Markdown input into HTML output in real-time.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Medium"]
     },
@@ -1259,8 +1381,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement a shopping cart feature for an e-commerce site with add, remove, and update functionalities.",
+=======
+      description: "Implement a shopping cart feature for an e-commerce site with add, remove, and update functionalities.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Amazon"]
     },
@@ -1270,8 +1396,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Integrate a GraphQL API into a React application and perform queries and mutations.",
+=======
+      description: "Integrate a GraphQL API into a React application and perform queries and mutations.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Airbnb"]
     },
@@ -1281,8 +1411,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement state management using Redux in a React application.",
+=======
+      description: "Implement state management using Redux in a React application.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["PayPal"]
     },
@@ -1292,8 +1426,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Create a voice recognition feature to interact with a web application using the Web Speech API.",
+=======
+      description: "Create a voice recognition feature to interact with a web application using the Web Speech API.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "hard",
       askedIn: ["Google"]
     },
@@ -1303,8 +1441,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Develop a password strength indicator to provide feedback on the strength of user passwords.",
+=======
+      description: "Develop a password strength indicator to provide feedback on the strength of user passwords.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "easy",
       askedIn: ["Twitter"]
     },
@@ -1314,8 +1456,12 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Implement server-side rendering for a React application using Next.js.",
+=======
+      description: "Implement server-side rendering for a React application using Next.js.",
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
       difficulty: "medium",
       askedIn: ["Netflix"]
     },
@@ -1325,6 +1471,7 @@ export const Arun_M_questions = {
       date: "25 July 2024",
       author: "sameerkali",
       link: "https://github.com/sameerkali/React_coding_round_practice",
+<<<<<<< HEAD
       description:
         "Enhance the accessibility of a web application by implementing ARIA roles and keyboard navigation.",
       difficulty: "medium",
@@ -1342,3 +1489,14 @@ export const Arun_M_questions = {
     }
   ]
 };
+=======
+      description: "Enhance the accessibility of a web application by implementing ARIA roles and keyboard navigation.",
+      difficulty: "medium",
+      askedIn: ["Microsoft"]
+    },
+    
+    
+    
+  ]
+}
+>>>>>>> 71b573c8751ab87ecbf95a570c13921099a3acf3
