@@ -25,7 +25,7 @@ const FollowingCurser = () => {
     };
   };
 
-  const throttledHandleMovement = throttle(handleMovement, 40);  
+  const throttledHandleMovement = throttle(handleMovement, 20);  
 
   return (
     <div
