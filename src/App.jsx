@@ -35,7 +35,7 @@ import FollowingCurser from "./All Assessment/assessment19/FollowingCurser";
 
 import Debouncing from "./All Assessment/assessment19/Debouncing";
 import Toster from "./All Assessment/assessment21/Toster";
-
+import MyToaster from "./All Assessment/assessment21/MyToaster";
 
 ReactGA.initialize("G-R3DJ0V5QK6");
 
@@ -104,7 +104,9 @@ const App = () => {
         <Route path="/following-curser" element={<FollowingCurser />} />
         <Route path="/problems" element={<ProblemsPage />} />
         <Route path="/feedback" element={<Feedback />} />
-        <Route path="/debouncing" element={<Debouncing />} /><Route path="/toster" element={<Toster />} />
+        <Route path="/debouncing" element={<Debouncing />} />
+        <Route path="/toster" element={<Toster />} />
+        <Route path="/mytoster" element={<MyToaster />} />
         <Route
           path="/code"
           element={<Code code={exampleCode} language="javascript" />}

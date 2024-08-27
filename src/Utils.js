@@ -84,6 +84,10 @@ export const buttonDetails = [
   {
     name: "Toster",
     description: "Toster message trigger on event."
+  },
+  {
+    name: "MyToster",
+    description: "Toster message trigger on event jo ki maine khud banaya hai"
   }
 ];
 
