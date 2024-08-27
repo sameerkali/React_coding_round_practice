@@ -80,6 +80,10 @@ export const buttonDetails = [
   {
     name: "Debouncing",
     description: "Impliment Debouncing."
+  },
+  {
+    name: "Toster",
+    description: "Toster message trigger on event."
   }
 ];
 
