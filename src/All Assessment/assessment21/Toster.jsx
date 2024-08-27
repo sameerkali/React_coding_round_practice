@@ -33,7 +33,7 @@ const Toster = () => {
           className={`z-1000 absolute right-10 transition-all duration-500 ${
             toast.visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
           }`}
-          style={{ top: `${10 + index * 60}px` }} // Adjust the position based on index
+          style={{ top: `${10 + index * 60}px` }}
         >
           <TosterBox onClose={() => removeToast(toast.id)} />
         </div>
