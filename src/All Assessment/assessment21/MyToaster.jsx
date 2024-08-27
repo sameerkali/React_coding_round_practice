@@ -1,4 +1,5 @@
 import React from "react";
+import GoToHome from "../../Components/GoToHome"
 
 const MyToaster = () => {
   const [toast, setToast] = React.useState([]);
@@ -25,8 +26,9 @@ const MyToaster = () => {
           </div>
         )}
       </div>
-      <h1>Hello React.</h1>
-      <button onClick={handleClick}>Click Me To Show Toaster</button>
+      <GoToHome/>
+      <h1>Toaster By sameerkali</h1>
+      <button style={{backgroundColor: '#ccc'}} onClick={handleClick}>Click Me To Show Toaster</button>
     </div>
   );
 };
