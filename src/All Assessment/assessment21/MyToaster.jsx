@@ -1,5 +1,5 @@
 import React from "react";
-import GoToHome from "../../Components/GoToHome"
+import GoToHome from "../../Components/GoToHome";
 
 const MyToaster = () => {
   const [toast, setToast] = React.useState([]);
@@ -26,16 +26,34 @@ const MyToaster = () => {
           </div>
         )}
       </div>
-      <GoToHome/>
+      <GoToHome />
       <h1>Toaster By sameerkali</h1>
-      <button style={{backgroundColor: '#ccc'}} onClick={handleClick}>Click Me To Show Toaster</button>
+      <button style={{ backgroundColor: "#ccc" }} onClick={handleClick}>
+        Click Me To Show Toaster
+      </button>
     </div>
   );
 };
 
 export default MyToaster;
 
-const Toast = ({ close }) => {
+const Toast = ({ close, time = 6 }) => {
+  const [count, setCount] = React.useState(time);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCount((prev) => {
+        if (prev === 1) {
+          clearInterval(intervalId);
+          close();
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [close]);
+
   return (
     <div
       style={{
@@ -45,16 +63,15 @@ const Toast = ({ close }) => {
         gap: "20px",
         backgroundColor: "white",
         padding: "10px",
-        backgroundColor: "red"
+        backgroundColor: "red",
       }}
     >
       <h1>I am a sweet Toast</h1>
-      <button
-        style={{ fontSize: "3rem", backgroundColor: "transparent" }}
-        onClick={close}
-      >
+      <h1>{count}</h1>
+      <button style={{ fontSize: "3rem", backgroundColor: "transparent" }} onClick={close}>
         x
       </button>
     </div>
   );
 };
+
