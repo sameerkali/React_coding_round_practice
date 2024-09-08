@@ -3,29 +3,25 @@ import React, { useState } from "react";
 const Todo = () => {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState("");
+  console.log(todo)
 
   const addTodo = () => {
-    if (todo.trim() !== "") {
-      let newTodo = { id: Date.now(), content: todo };
-      setTodos((prev) => [...prev, newTodo]);
-      setTodo("");
+    if(todo.trim() !== ""){
+      let newTodo = {id: Date.now() , content: todo}
+      setTodos( prev => [...prev, newTodo ])
     }
   };
 
   const removeTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setTodos(todos.filter(t => t.id !== id))
   };
 
   const updateTodo = (id, newText) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, content: newText } : todo
-      )
-    );
+      setTodos(todos.map(t => ( t.id === id ? {...t, content: newText} : t)))
   };
 
   const handleChange = (e) => {
-    setTodo(e.target.value);
+    setTodo(e.target.value)
   };
 
   return (
