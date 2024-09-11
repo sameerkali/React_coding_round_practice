@@ -61,7 +61,6 @@ const Toast = ({ close, time = 6 }) => {
         justifyContent: "center",
         alignItems: "center",
         gap: "20px",
-        backgroundColor: "white",
         padding: "10px",
         backgroundColor: "red",
       }}
