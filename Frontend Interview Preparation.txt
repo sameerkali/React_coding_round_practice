@@ -121,7 +121,9 @@ I'd be happy to provide detailed answers on these HTML and web development topic
 
 Semantic HTML5 Elements
 
-Semantic HTML5 elements are tags that convey meaning about the structure and content of a web page to both browsers and developers. They improve accessibility, SEO, and code readability. Key semantic elements include:
+Semantic HTML5 elements are tags that convey meaning about the structure and content of a web page to
+ both browsers and developers. They improve accessibility, SEO, and code readability. Key semantic
+  elements include:
 
 <header>: Introductory content or navigational links
 <nav>: Navigation links
@@ -134,7 +136,8 @@ Semantic HTML5 elements are tags that convey meaning about the structure and con
 <time>: For dates and times
 <mark>: Highlighted text
 
-Using these elements properly helps search engines understand your content and assists screen readers in navigating the page structure.
+Using these elements properly helps search engines understand your content and assists screen 
+readers in navigating the page structure.
 
 HTML Forms and Validation
 
