@@ -92,6 +92,10 @@ export const buttonDetails = [
   {
     name: "Todo",
     description: "Basic todo app using local storage"
+  },
+  {
+    name: "Counter_p",
+    description: "Advanced Counter "
   }
 ];
 
