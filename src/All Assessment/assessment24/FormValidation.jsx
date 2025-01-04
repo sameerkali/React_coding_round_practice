@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const FormValidation = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleName = (e) => {
+    setName(e.target.value)
+  }
+  const handleEmail = (e) => {
+    setName(e.target.value)
+  }
+  const handlePassword = (e) => {
+    setName(e.target.value)
+  }
 
   const handleForm = () => {
     alert("sameer")
