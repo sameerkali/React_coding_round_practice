@@ -1,5 +1,7 @@
 // import React, { useState } from "react";
 
+import { useState } from "react";
+
 // const Todo = () => {
 //   const [todos, setTodos] = useState([]);
 //   const [todo, setTodo] = useState("");
@@ -66,6 +68,50 @@
 // };
 
 // export default Todo;
+
+const Todo = () => {
+  const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState("");
+
+  console.log("todo:", todos);
+
+  const handleADD = () => {
+    if (todo.trim() !== "") {
+      let newtodo = { id: Date.now(), content: todo };
+      setTodos((prev) => [...prev, newtodo]);
+      setTodo("");
+    }
+  };
+
+  const handleRemove = (id) => {
+    // let rem = todos.filter((t) => (t.id === id))
+    // setTodos(prev => [...prev, rem])
+    console.log(id);
+  };
+
+  const handleUpdate = (id) => {};
+  
+  return (
+    <div>
+      <input
+        onChange={(e) => setTodo(e.target.value)}
+        placeholder="add todo"
+        type="text"
+        value={todo}
+      />
+      <button onClick={handleADD}> add todo</button>
+      <ul>
+        {todos.map((t) => (
+          <div>
+            <li key={t.id}>{t.content}</li>
+            <button onClick={handleRemove(t.id)}> remove</button>
+          </div>
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default Todo;
 
 
 
