@@ -38,6 +38,7 @@ import Toster from "./All Assessment/assessment21/Toster";
 import MyToaster from "./All Assessment/assessment21/MyToaster";
 import Todo from "./All Assessment/assessment22/Todo";
 import Counter_p from './All Assessment/assessment23/Counter_p'
+import FormValidation from "./All Assessment/assessment24/FormValidation";
 
 ReactGA.initialize("G-R3DJ0V5QK6");
 
@@ -111,6 +112,8 @@ const App = () => {
         <Route path="/mytoster" element={<MyToaster />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/counter_p" element={<Counter_p />} />
+        <Route path="/formValidation" element={<FormValidation />} />
+
 
         
         <Route

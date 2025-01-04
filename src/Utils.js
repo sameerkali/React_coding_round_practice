@@ -96,6 +96,10 @@ export const buttonDetails = [
   {
     name: "Counter_p",
     description: "Advanced Counter "
+  },
+  {
+    name: "FormValidation",
+    description: "Advanced Counter "
   }
 ];
 
