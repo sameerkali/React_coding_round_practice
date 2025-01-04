@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 
-import { useState } from "react";
+// import { useState } from "react";
 
 // const Todo = () => {
 //   const [todos, setTodos] = useState([]);
@@ -69,66 +69,59 @@ import { useState } from "react";
 
 // export default Todo;
 
+import React, { useState } from "react";
+
 const Todo = () => {
-  const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [clickUpdate, setClickUpdate] = useState(false);
+  console.log("todos:", todos);
 
-  console.log("todo:", todos);
-
-  const handleADD = () => {
-    if (todo.trim() !== "") {
-      let newtodo = { id: Date.now(), content: todo };
-      setTodos((prev) => [...prev, newtodo]);
+  const AddTodo = () => {
+    if (todo !== "") {
+      let newTodo = { id: Date.now(), content: todo };
+      setTodos((prev) => [...prev, newTodo]);
       setTodo("");
     }
   };
-
-  const handleRemove = (id) => {
-    // let rem = todos.filter((t) => (t.id === id))
-    // setTodos(prev => [...prev, rem])
-    console.log(id);
+  const removeTodo = (id) => {
+    setTodos(todos.filter((t) => t.id != id));
   };
-
-  const handleUpdate = (id) => {};
-  
+  const updateTodo = (id) => {
+    setClickUpdate(!clickUpdate);
+  };
   return (
     <div>
       <input
-        onChange={(e) => setTodo(e.target.value)}
-        placeholder="add todo"
-        type="text"
         value={todo}
+        className="border-2 border-black "
+        placeholder=" eat apple"
+        onChange={(e) => {
+          setTodo(e.target.value);
+        }}
       />
-      <button onClick={handleADD}> add todo</button>
+      <button onClick={AddTodo}>add</button>
       <ul>
         {todos.map((t) => (
-          <div>
-            <li key={t.id}>{t.content}</li>
-            <button onClick={handleRemove(t.id)}> remove</button>
+          <div className="flex gap-10" key={t.id}>
+            {clickUpdate ? (
+              <li>{t.content}</li>
+            ) : (
+              <input
+                value={t.content}
+                className="border-2 border-black "
+                onChange={(e) => {
+                  setTodo(e.target.value);
+                }}
+              />
+            )}
+            <button onClick={() => removeTodo(t.id)}>Remove</button>
+            <button onClick={() => updateTodo(t.id)}>Update</button>
           </div>
         ))}
       </ul>
     </div>
   );
 };
+
 export default Todo;
-
-
-
-import React, { useState } from "react";
-
-
-const Todo = () => {
-  const [todo, setTodo] = useState('')
-
-  const handleChange = (e) => {
-setTodo(e.target.value)
-  }
-  return (
-    <div>
-      <input className='border-2 border-black ' placeholder=' eat apple' onChange={handleChange}/>
-    </div>
-  )
-}
-
-export default Todo
